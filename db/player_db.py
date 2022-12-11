@@ -10,7 +10,7 @@ def get_db(url, token):
     r = requests.get(url, headers=headers)
     data = json.loads(r.text)
     if r.status_code == 200:
-        with open('db/db.json', 'w') as f:
+        with open('db/player_db.json', 'w') as f:
             data = data["items"]
             for item in data:
                 if item["position"] == "GK":
@@ -63,11 +63,11 @@ def get_db(url, token):
 
 def export_db(path_to_file):
     df = pd.read_json(path_to_file)
-    df.to_csv('db/db.csv', index=False)
+    df.to_csv('db/player_db.csv', index=False)
 
 
 if __name__ == '__main__':
     url = 'https://futdb.app/api/players?page=1'
     token = "4dbfc4e6-4236-4999-9746-a655c40c0a29"
     get_db(url, token)
-    export_db('db/db.json')
+    export_db('db/player_db.json')
