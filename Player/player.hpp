@@ -5,7 +5,7 @@
 
 typedef enum poste_t {
     GK, RB, RWB, LB, LWB, CB, CDM, CM, CAM, LM, LW, LF, RM, RW, RF, VF, ST
-};
+}poste_t;
 
 class Player : public People{
     public:
@@ -19,5 +19,6 @@ class Player : public People{
     private:
         std::string _club = "Club";
         std::string _national = "National";
-        poste_t _position = ST;
+        poste_t _position = LW;
+        
 };
