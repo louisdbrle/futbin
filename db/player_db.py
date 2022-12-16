@@ -74,11 +74,6 @@ def get_db(url, token):
         return data
 
 
-def export_db(path_to_json):
-    df = pd.read_json(path_to_json)
-    df.to_csv('db/player_db.csv', index=False)
-
-
 if __name__ == '__main__':
     url = 'https://futdb.app/api/players?page=1'
     token = "4dbfc4e6-4236-4999-9746-a655c40c0a29"
@@ -86,5 +81,3 @@ if __name__ == '__main__':
 
     with open('db/player_db.json', 'w') as f:
         json.dump(players, f)
-
-    export_db('db/player_db.json')
