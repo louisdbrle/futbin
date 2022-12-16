@@ -13,13 +13,8 @@ def get_db(url, token):
         return data["items"]
 
 
-def export_db(path_to_file):
-    df = pd.read_json(path_to_file)
-    df.to_csv('db/nation_db.csv', index=False)
-
-
-if __name__ == '__main__':
-    qualified = ["Netherlands", "United-States", "Argentina",
+if __name__ == "__main__":
+    qualified = ["Netherlands", "United States", "Argentina",
                  "Australia", "Japan", "Croatia", "Brazil", "Korea Republic", "England", "Senegal", "France", "Poland", "Morocco", "Spain", "Portugal", "Switzerland"]
 
     url = "https://futdb.app/api/nations?page="
@@ -29,11 +24,7 @@ if __name__ == '__main__':
     for i in range(1, 9):
         nations += get_db(url+str(i), token)
 
-    for nation in nations:
-        if nation["name"] not in qualified:
-            nations.remove(nation)
+    nations = [nation for nation in nations if nation["name"] in qualified]
 
-    with open("db/nation_db.json", "w") as f:
+    with open("db/nation_db.json", 'w') as f:
         json.dump(nations, f)
-
-    export_db("db/nation_db.json")
