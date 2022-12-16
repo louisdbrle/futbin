@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include "../Team/team.hpp"
-
+#include "../User/user.hpp"
 
 class Match{
     public:
@@ -15,5 +15,6 @@ class Match{
     private:
         Team _team_dom;
         Team _team_ext;
+        User _winner;
         
 };

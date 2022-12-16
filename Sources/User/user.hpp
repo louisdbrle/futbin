@@ -5,6 +5,8 @@
 #include "../Team/team.hpp"
 #include "../Player/player.hpp"
 #include "../Coach/coach.hpp"
+#include "../Match/match.hpp"
+#include "../Game/game.hpp"
 
 class User{
     public:
@@ -19,5 +21,6 @@ class User{
         Team _team;
         Player _tab_player[30];
         Coach _tab_coach[30];
+        Game _historic_game[10];
         
 };
