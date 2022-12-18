@@ -8,19 +8,24 @@
 #include "../Match/match.hpp"
 #include "../Game/game.hpp"
 
-class User{
-    public:
-        User();
-        //~User();
+class Team;
+class Player;
+class Coach;
+class Game;
 
-        Team get_team(){return _team;}
-        Player* get_tab_player(){ return _tab_player;}
-        Coach* get_tab_coach(){ return _tab_coach;}
+class User
+{
+public:
+    User();
+    //~User();
 
-    private:
-        Team _team;
-        Player _tab_player[30];
-        Coach _tab_coach[30];
-        Game _historic_game[10];
-        
+    Team get_team() { return _team; }
+    Player *get_tab_player() { return _tab_player; }
+    Coach *get_tab_coach() { return _tab_coach; }
+
+private:
+    Team _team;
+    Player _tab_player[30];
+    Coach _tab_coach[30];
+    Game _historic_game[10];
 };
