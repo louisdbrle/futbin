@@ -1,10 +1,10 @@
 CC=g++
 CCFLAGS= -Wall -Werror -std=c++11 -g
 
-LIB_DIR=Libs/
+LIB_DIR=Libs
 LIBFLAGS=
 
-SRC_DIR=Sources/
+SRC_DIR=Sources
 SRC= $(wildcard $(SRC_DIR)/*/*.cpp) $(wildcard main.cpp)
 
 OBJ= $(SRC:.cpp=.o)
@@ -25,9 +25,9 @@ test : testcase
 	cd $(TST_DIR); ./testcase
 
 $(EXEC): $(OBJ)
-	$(CC) $(LIBFLAGS) $^ -o $@  
+	$(CC) $(CCFLAGS) $(LIBFLAGS) $^ -o $@  
 
-%.o: %.cc
+%.o: %.cpp
 	$(CC) $(CCFLAGS) -o $@ -c $<
 
 .depend:

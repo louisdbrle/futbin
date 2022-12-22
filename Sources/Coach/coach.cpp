@@ -1,9 +1,8 @@
 #include "coach.hpp"
 
 Coach::Coach() 
-    : People()
+    : People(), _team("Team")
 {
-    _team = "Team";
 }
 
 Coach::Coach(std::string name, std::string last_name, u_short age, std::string nationality, std::string team)

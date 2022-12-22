@@ -11,12 +11,14 @@ typedef enum stat_FP_t {
 class FieldPlayer : public Player{
     public:
         FieldPlayer();
+        
+        // TODO : might need to had a pointer to a array containing the stats.
         FieldPlayer(std::string name, std::string last_name, u_short age, std::string nationality, std::string club, std::string national, poste_t position);
         //~FieldPlayer();
 
-        std::map<stat_FP_t,int>* get_stats(){ return _stats;}
+        std::map<stat_FP_t,char>* get_stats(){ return _stats;}
 
     private:
         
-        std::map<stat_FP_t,int> _stats[7];
+        std::map<stat_FP_t,char> _stats[7];
 };

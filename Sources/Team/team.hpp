@@ -15,7 +15,8 @@ class Team
 {
 public:
     Team();
-    Team(std::vector<Player>& _ptr_vect_player, Coach& _ptr_coach);
+    Team(Team& team);
+    Team(Coach& _coach);
     //~Team();
 
     std::vector<Player*> get_vect_player() { return _vect_player; }
