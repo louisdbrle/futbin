@@ -1,17 +1,18 @@
 #pragma once
 
-#include <iostream>
+class Team;
+class Player;
+class Coach;
+class Game;
 
+
+#include <iostream>
 #include "../Team/team.hpp"
 #include "../Player/player.hpp"
 #include "../Coach/coach.hpp"
 #include "../Match/match.hpp"
 #include "../Game/game.hpp"
 
-class Team;
-class Player;
-class Coach;
-class Game;
 
 class User
 {
@@ -19,13 +20,14 @@ public:
     User();
     //~User();
 
-    Team get_team() { return _team; }
-    Player *get_tab_player() { return _tab_player; }
-    Coach *get_tab_coach() { return _tab_coach; }
+    std::vector <Team*>  get_vect_team() { return _vect_team; }
+    std::vector <Player*> get_vect_player() { return _vect_player; }
+    std::vector <Coach*> get_vect_coach() { return _vect_coach; }
+    std::vector <Game*> get_vect_historic_game() { return _vect_historic_game; }
 
 private:
-    Team _team;
-    Player _tab_player[30];
-    Coach _tab_coach[30];
-    Game _historic_game[10];
+    std::vector <Team*> _vect_team;
+    std::vector <Player*> _vect_player;
+    std::vector <Coach*> _vect_coach;
+    std::vector <Game*> _vect_historic_game;
 };
