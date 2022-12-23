@@ -10,6 +10,7 @@ Team::Team()
 Team::Team(Team& team) 
     : _vect_player(team._vect_player), _vect_historic_match(team._vect_historic_match), _ptr_coach(team._ptr_coach)
 {
+    
 }
 
 Team::Team(Coach& coach)
