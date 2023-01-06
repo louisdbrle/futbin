@@ -9,6 +9,7 @@ def get_db(url, token):
     headers = {'accept': 'application/json', 'X-Auth-Token': token}
     r = requests.get(url, headers=headers)
     data = json.loads(r.text)
+    out = []
     if r.status_code == 200:
         with open('db/nation_db.json', 'r') as f:
             nations = json.load(f)
@@ -48,36 +49,48 @@ def get_db(url, token):
             del item["birthDate"]
             del item["weight"]
             del item["height"]
-            del item["name"]
             del item["lastName"]
             del item["firstName"]
             del item["futWizId"]
             del item["futBinId"]
             del item["resourceBaseId"]
             del item["resourceId"]
-            del item["id"]
-
-        for item in data:
-            if item["commonName"] == "":
-                data.remove(item)
-                break
 
             for nation in nations:
                 if item["nation"] == nation["id"]:
                     item["nation"] = nation["name"]
-                    break
 
-            if type(item["nation"]) == int:
-                data.remove(item)
-                break
+            if type(item["nation"]) == str and item["commonName"] != "":
+                out.append(item)
 
-        return data
+    return out
 
 
 if __name__ == '__main__':
-    url = 'https://futdb.app/api/players?page=1'
-    token = "4dbfc4e6-4236-4999-9746-a655c40c0a29"
-    players = get_db(url, token)
+    url = 'https://futdb.app/api/players?page='
+    token = "a61b1f6f-35b6-4615-9636-07e9864ec647"
+    players = []
 
-    with open('db/player_db.json', 'w') as f:
-        json.dump(players, f)
+    # for i in range(1, 850):
+    #    players += get_db(url + str(i), token)
+
+    with open('db/players.csv', 'r') as f:
+        df = pd.read_csv(f)
+        names = list(df.columns)
+
+    with open('db/player_db.json', 'r') as f:
+        players = json.load(f)
+
+    clean = []
+
+    for player in players:
+        if player["name"] in names:
+            clean.append(player)
+        elif player["commonName"] in names:
+            clean.append(player)
+
+    # with open('db/player_db.json', 'w') as f:
+    #     json.dump(players, f)
+
+    with open('db/clean_player_db.json', 'w') as f:
+        json.dump(clean, f)
