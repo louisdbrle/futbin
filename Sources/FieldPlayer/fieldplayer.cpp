@@ -3,15 +3,15 @@
 FieldPlayer::FieldPlayer()
     : Player()
 {
-    _stats->at(RATING) = 255;
- 
-    _stats->at(PACE) = 255;
-    _stats->at(SHOOTING) = 255;
-    _stats->at(PASSING) = 255;
- 
-    _stats->at(DRIBBLING) = 255;
-    _stats->at(DEFENDING) = 255;
-    _stats->at(PHYSICALITY) = 255;
+    _stats->insert(std::pair<stat_FP_t,char>(RATING_FP,255));
+
+    _stats->insert(std::pair<stat_FP_t,char>(PACE,255));
+    _stats->insert(std::pair<stat_FP_t,char>(SHOOTING,255));
+    _stats->insert(std::pair<stat_FP_t,char>(PASSING,255));
+
+    _stats->insert(std::pair<stat_FP_t,char>(DRIBBLING,255));
+    _stats->insert(std::pair<stat_FP_t,char>(DEFENDING,255));
+    _stats->insert(std::pair<stat_FP_t,char>(PHYSICALITY,255));
 
 }
 
@@ -22,13 +22,13 @@ FieldPlayer::FieldPlayer(std::string name, std::string last_name, u_short age, s
     : Player(name, last_name, age, nationality, club, national, position)
 {
     // Default value for now, until implementation of the pointer
-    _stats->at(RATING) = 255;
- 
-    _stats->at(PACE) = 255;
-    _stats->at(SHOOTING) = 255;
-    _stats->at(PASSING) = 255;
- 
-    _stats->at(DRIBBLING) = 255;
-    _stats->at(DEFENDING) = 255;
-    _stats->at(PHYSICALITY) = 255;
+    _stats->insert(std::pair<stat_FP_t,char>(RATING_FP,255));
+
+    _stats->insert(std::pair<stat_FP_t,char>(PACE,255));
+    _stats->insert(std::pair<stat_FP_t,char>(SHOOTING,255));
+    _stats->insert(std::pair<stat_FP_t,char>(PASSING,255));
+
+    _stats->insert(std::pair<stat_FP_t,char>(DRIBBLING,255));
+    _stats->insert(std::pair<stat_FP_t,char>(DEFENDING,255));
+    _stats->insert(std::pair<stat_FP_t,char>(PHYSICALITY,255));
 }

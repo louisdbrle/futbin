@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1366"
+   height="768"
+   viewBox="0 0 1366 768"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01, custom)"
+   sodipodi:docname="Application_layout"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:lockguides="true"
+     inkscape:zoom="0.63713267"
+     inkscape:cx="808.30888"
+     inkscape:cy="360.20755"
+     inkscape:window-width="1920"
+     inkscape:window-height="920"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1-3" />
+  <defs
+     id="defs2">
+    <rect
+       x="299.06358"
+       y="99.325145"
+       width="521.62717"
+       height="204.19509"
+       id="rect1182" />
+  </defs>
+  <g
+     inkscape:label="Screen_profile_team"
+     inkscape:groupmode="layer"
+     id="g2029"
+     style="display:none"
+     transform="translate(-0.52675809,-3.3164651)"
+     inkscape:highlight-color="#ff4109"
+     sodipodi:insensitive="true">
+    <rect
+       style="fill:#ffffff"
+       id="rect2007"
+       width="1365.0564"
+       height="774.6416"
+       x="1.6517341"
+       y="-1.6777457" />
+    <a
+       id="a2011"
+       transform="matrix(2.8029354,0,0,5.4955163,-1212.9093,-2405.3554)"
+       style="display:inline">
+      <rect
+         style="fill:#000000"
+         id="rect2009"
+         width="461.67487"
+         height="127.63006"
+         x="442.24423"
+         y="444.45953"
+         sodipodi:insensitive="true" />
+    </a>
+    <path
+       sodipodi:type="star"
+       style="display:inline;fill:#ff0000"
+       id="path2017"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="54.914738"
+       sodipodi:cy="60.48555"
+       sodipodi:r1="23.097958"
+       sodipodi:r2="11.548978"
+       sodipodi:arg1="0.95556513"
+       sodipodi:arg2="1.5838837"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 68.245663,79.348267 54.763596,72.033539 41.09471,78.992913 43.885242,63.910331 33.042566,53.061012 48.249276,51.054192 55.21702,37.38957 61.824751,51.231869 76.97373,53.635987 65.850822,64.197819 Z"
+       inkscape:transform-center-x="-0.093410267"
+       inkscape:transform-center-y="-2.1166313"
+       transform="translate(5.4752601,6.5515958)" />
+    <rect
+       style="fill:#ffffff;stroke-width:0.920578"
+       id="rect2107"
+       width="123.19942"
+       height="34.413296"
+       x="110.9415"
+       y="63.784672" />
+    <text
+       xml:space="preserve"
+       style="font-size:17.3333px;fill:#000000"
+       x="137.573"
+       y="84.880051"
+       id="text2113"><tspan
+         sodipodi:role="line"
+         id="tspan2111"
+         x="137.573"
+         y="84.880051">Teams</tspan></text>
+    <rect
+       style="fill:#ffffff"
+       id="rect2169"
+       width="204.19075"
+       height="519.3902"
+       x="55.43716"
+       y="128.15895" />
+    <rect
+       style="display:inline;fill:#ffffff"
+       id="rect2169-4"
+       width="204.19075"
+       height="519.3902"
+       x="305.74643"
+       y="128.72252" />
+    <rect
+       style="display:inline;fill:#ffffff;stroke-width:1.88101"
+       id="rect2169-4-5"
+       width="722.47107"
+       height="519.3902"
+       x="568.77966"
+       y="130.95085" />
+    <rect
+       style="fill:#ff7f2a"
+       id="rect2393"
+       width="5.5621386"
+       height="513.84106"
+       x="919.98773"
+       y="130.3786" />
+    <text
+       xml:space="preserve"
+       style="font-size:17.3333px;fill:#ff7f2a"
+       x="66.513748"
+       y="341.24133"
+       id="text2449"><tspan
+         sodipodi:role="line"
+         id="tspan2447"
+         x="66.513748"
+         y="341.24133">Apercus des joueurs </tspan><tspan
+         sodipodi:role="line"
+         x="66.513748"
+         y="362.90796"
+         id="tspan2451">et coach</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:17.3333px;fill:#ff7f2a"
+       x="324.03253"
+       y="351.23843"
+       id="text2505"><tspan
+         sodipodi:role="line"
+         id="tspan2503"
+         x="324.03253"
+         y="351.23843">Apercus de l equipe</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:17.3333px;fill:#ff7f2a"
+       x="579.271"
+       y="352.36124"
+       id="text2509"><tspan
+         sodipodi:role="line"
+         id="tspan2507"
+         x="579.271"
+         y="352.36124">Apercu carte du joeurs de la collection</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:17.3333px;fill:#ff7f2a"
+       x="954.38367"
+       y="360.10403"
+       id="text2513"><tspan
+         sodipodi:role="line"
+         id="tspan2511"
+         x="954.38367"
+         y="360.10403">Apercus carte du joueur de l equipe</tspan></text>
+    <rect
+       style="fill:#ffffff;stroke-width:2.04239"
+       id="rect2515"
+       width="351.80203"
+       height="52.157513"
+       x="113.20451"
+       y="668.6488" />
+    <text
+       xml:space="preserve"
+       style="font-size:17.3333px;fill:#000000"
+       x="255.23196"
+       y="701.9306"
+       id="text2809"><tspan
+         sodipodi:role="line"
+         id="tspan2807"
+         x="255.23196"
+         y="701.9306">Swap</tspan></text>
+    <path
+       style="fill:#000000;stroke-width:0.712223"
+       d="m 203.33456,75.175569 h 16.65174 l -9.40761,15.528902 z"
+       id="path2867" />
+  </g>
+  <g
+     inkscape:label="Screen_profile_historic"
+     inkscape:groupmode="layer"
+     id="g2053"
+     style="display:none"
+     transform="translate(-0.52675809,-3.3164651)"
+     inkscape:highlight-color="#ff4109"
+     sodipodi:insensitive="true">
+    <rect
+       style="fill:#ffffff"
+       id="rect2031"
+       width="1365.0564"
+       height="774.6416"
+       x="1.6517341"
+       y="-1.6777457" />
+    <a
+       id="a2035"
+       transform="matrix(2.8029354,0,0,5.1651834,-1212.9093,-2258.5358)"
+       style="display:inline">
+      <rect
+         style="fill:#000000"
+         id="rect2033"
+         width="461.67487"
+         height="127.63006"
+         x="442.24423"
+         y="444.45953"
+         sodipodi:insensitive="true" />
+    </a>
+    <rect
+       style="fill:#ffffff"
+       id="rect2037"
+       width="267.46387"
+       height="593.73987"
+       x="94.294098"
+       y="64.903168" />
+    <rect
+       style="fill:#ffffff"
+       id="rect2039"
+       width="861.20807"
+       height="600.40753"
+       x="428.34756"
+       y="68.236984" />
+    <path
+       sodipodi:type="star"
+       style="display:inline;fill:#ff0000"
+       id="path2041"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="54.914738"
+       sodipodi:cy="60.48555"
+       sodipodi:r1="23.097958"
+       sodipodi:r2="11.548978"
+       sodipodi:arg1="0.95556513"
+       sodipodi:arg2="1.5838837"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 68.245663,79.348267 54.763596,72.033539 41.09471,78.992913 43.885242,63.910331 33.042566,53.061012 48.249276,51.054192 55.21702,37.38957 61.824751,51.231869 76.97373,53.635987 65.850822,64.197819 Z"
+       inkscape:transform-center-x="-0.093410267"
+       inkscape:transform-center-y="-2.1166313"
+       transform="translate(5.4752601,6.5515958)" />
+    <text
+       xml:space="preserve"
+       style="font-size:17.3333px;fill:#ff0000"
+       x="174.17995"
+       y="276.8627"
+       id="text2047"><tspan
+         sodipodi:role="line"
+         id="tspan2043"
+         x="174.17995"
+         y="276.8627">Listing des 10 </tspan><tspan
+         sodipodi:role="line"
+         x="174.17995"
+         y="298.52933"
+         id="tspan2045">derniere partie jouer</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:17.3333px;fill:#ff0000"
+       x="658.06433"
+       y="307.9422"
+       id="text2051"><tspan
+         sodipodi:role="line"
+         id="tspan2049"
+         x="658.06433"
+         y="307.9422">Apercu de la partie </tspan></text>
+  </g>
+  <g
+     inkscape:label="Screen_profile_collection"
+     inkscape:groupmode="layer"
+     id="g1499"
+     style="display:none"
+     transform="translate(-0.52675809,-3.3164651)"
+     inkscape:highlight-color="#ff4109"
+     sodipodi:insensitive="true">
+    <rect
+       style="fill:#ffffff"
+       id="rect1473"
+       width="1365.0564"
+       height="774.6416"
+       x="1.6517341"
+       y="-1.6777457" />
+    <a
+       id="a1489"
+       transform="matrix(2.8029354,0,0,5.1651834,-1212.9093,-2258.5358)"
+       style="display:inline">
+      <rect
+         style="fill:#000000"
+         id="rect1483"
+         width="461.67487"
+         height="127.63006"
+         x="442.24423"
+         y="444.45953"
+         sodipodi:insensitive="true" />
+    </a>
+    <rect
+       style="fill:#ffffff"
+       id="rect1501"
+       width="267.46387"
+       height="593.73987"
+       x="94.294098"
+       y="64.903168" />
+    <rect
+       style="fill:#ffffff"
+       id="rect1503"
+       width="861.20807"
+       height="600.40753"
+       x="428.34756"
+       y="68.236984" />
+    <path
+       sodipodi:type="star"
+       style="display:inline;fill:#ff0000"
+       id="path1767-8"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="54.914738"
+       sodipodi:cy="60.48555"
+       sodipodi:r1="23.097958"
+       sodipodi:r2="11.548978"
+       sodipodi:arg1="0.95556513"
+       sodipodi:arg2="1.5838837"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 68.245663,79.348267 54.763596,72.033539 41.09471,78.992913 43.885242,63.910331 33.042566,53.061012 48.249276,51.054192 55.21702,37.38957 61.824751,51.231869 76.97373,53.635987 65.850822,64.197819 Z"
+       inkscape:transform-center-x="-0.093410267"
+       inkscape:transform-center-y="-2.1166313"
+       transform="translate(5.4752601,6.5515958)" />
+    <text
+       xml:space="preserve"
+       style="font-size:17.3333px;fill:#ff0000"
+       x="174.17995"
+       y="276.8627"
+       id="text1949"><tspan
+         sodipodi:role="line"
+         id="tspan1947"
+         x="174.17995"
+         y="276.8627">Listing des 30 </tspan><tspan
+         sodipodi:role="line"
+         x="174.17995"
+         y="298.52933"
+         id="tspan2001">joueurs disponibles</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:17.3333px;fill:#ff0000"
+       x="658.06433"
+       y="307.9422"
+       id="text2005"><tspan
+         sodipodi:role="line"
+         id="tspan2003"
+         x="658.06433"
+         y="307.9422">Apercu de la carte  du joeur</tspan></text>
+  </g>
+  <g
+     inkscape:label="Screen_profile"
+     inkscape:groupmode="layer"
+     id="layer1-3-9"
+     style="display:none"
+     transform="translate(-0.52675809,-3.3164651)"
+     sodipodi:insensitive="true">
+    <rect
+       style="fill:#ffffff"
+       id="rect414-6-2"
+       width="1365.0564"
+       height="774.6416"
+       x="1.6517341"
+       y="-1.6777457" />
+    <a
+       id="a1088-6-6-0-3"
+       transform="translate(-388.42196,-95.432091)"
+       style="display:inline">
+      <rect
+         style="fill:#000000"
+         id="rect860-0-0-1-2-19"
+         width="461.67487"
+         height="127.63006"
+         x="442.24423"
+         y="444.45953"
+         sodipodi:insensitive="true" />
+      <text
+         xml:space="preserve"
+         style="font-size:17.3333px;fill:#ffffff"
+         x="618.69794"
+         y="509.935"
+         id="text966-9-6-8-3-4"><tspan
+           sodipodi:role="line"
+           id="tspan964-3-2-7-7-7"
+           x="618.69794"
+           y="509.935">Teams</tspan></text>
+    </a>
+    <a
+       id="a1088-6-6-0-6"
+       transform="translate(-387.33815,-238.59105)"
+       style="display:inline">
+      <rect
+         style="fill:#000000"
+         id="rect860-0-0-1-2-1"
+         width="461.67487"
+         height="127.63006"
+         x="442.24423"
+         y="444.45953"
+         sodipodi:insensitive="true" />
+      <text
+         xml:space="preserve"
+         style="font-size:17.3333px;fill:#ffffff"
+         x="618.69794"
+         y="509.935"
+         id="text966-9-6-8-3-2"><tspan
+           sodipodi:role="line"
+           id="tspan964-3-2-7-7-9"
+           x="618.69794"
+           y="509.935">Game historic</tspan></text>
+    </a>
+    <a
+       id="a1088-6-6-0"
+       transform="translate(-387.83889,-387.29914)"
+       style="display:inline">
+      <rect
+         style="fill:#000000"
+         id="rect860-0-0-1-2"
+         width="461.67487"
+         height="127.63006"
+         x="442.24423"
+         y="444.45953"
+         sodipodi:insensitive="true" />
+      <text
+         xml:space="preserve"
+         style="font-size:17.3333px;fill:#ffffff"
+         x="618.69794"
+         y="509.935"
+         id="text966-9-6-8-3"><tspan
+           sodipodi:role="line"
+           x="618.69794"
+           y="509.935"
+           id="tspan1401">Collection</tspan></text>
+    </a>
+    <path
+       sodipodi:type="star"
+       style="display:inline;fill:#ff0000"
+       id="path1767"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="27.147398"
+       sodipodi:cy="33.841045"
+       sodipodi:r1="23.097958"
+       sodipodi:r2="11.548978"
+       sodipodi:arg1="0.95556513"
+       sodipodi:arg2="1.5838837"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 40.478323,52.703762 26.996257,45.389034 13.327371,52.348408 16.117903,37.265826 5.2752264,26.416508 20.481936,24.409687 27.44968,10.745066 34.057412,24.587365 49.20639,26.991483 38.083483,37.553314 Z"
+       inkscape:transform-center-x="-0.093410267"
+       inkscape:transform-center-y="-2.1166313"
+       transform="translate(0.52676,3.3164651)" />
+  </g>
+  <g
+     inkscape:label="Screen_menu"
+     inkscape:groupmode="layer"
+     id="layer1-3"
+     style="display:inline"
+     inkscape:highlight-color="#f6e266">
+    <rect
+       style="fill:#ffffff"
+       id="rect414-6"
+       width="1365.0564"
+       height="774.6416"
+       x="1.6517341"
+       y="-1.6777457" />
+    <a
+       id="a1088-6-6"
+       transform="translate(20.577295,-24.385841)"
+       style="display:inline">
+      <rect
+         style="fill:#000000"
+         id="rect860-0-0-1"
+         width="461.67487"
+         height="127.63006"
+         x="442.24423"
+         y="444.45953"
+         sodipodi:insensitive="true" />
+      <text
+         xml:space="preserve"
+         style="font-size:17.3333px;fill:#ffffff"
+         x="618.69794"
+         y="509.935"
+         id="text966-9-6-8"><tspan
+           sodipodi:role="line"
+           id="tspan964-3-2-7"
+           x="618.69794"
+           y="509.935">Play a game</tspan></text>
+    </a>
+    <a
+       id="a1088-6"
+       transform="translate(433.42846,-336.25145)"
+       style="display:inline">
+      <rect
+         style="fill:#000000"
+         id="rect860-0-0"
+         width="461.67487"
+         height="127.63006"
+         x="442.24423"
+         y="444.45953"
+         sodipodi:insensitive="true" />
+      <text
+         xml:space="preserve"
+         style="font-size:17.3333px;fill:#ffffff"
+         x="633.1344"
+         y="508.83383"
+         id="text966-9-6"><tspan
+           sodipodi:role="line"
+           id="tspan964-3-2"
+           x="633.1344"
+           y="508.83383">Draw Cards</tspan></text>
+    </a>
+    <a
+       id="a1088"
+       transform="translate(-412.83382,-336.29046)">
+      <rect
+         style="fill:#000000"
+         id="rect860-0"
+         width="461.67487"
+         height="127.63006"
+         x="442.24423"
+         y="444.45953"
+         sodipodi:insensitive="true" />
+      <text
+         xml:space="preserve"
+         style="font-size:17.3333px;fill:#ffffff"
+         x="644.2196"
+         y="512.16766"
+         id="text966-9"><tspan
+           sodipodi:role="line"
+           id="tspan964-3"
+           x="644.2196"
+           y="512.16766">Profile</tspan></text>
+    </a>
+  </g>
+  <g
+     inkscape:label="Screen_boot"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <rect
+       style="fill:#ffffff"
+       id="rect414"
+       width="1365.0564"
+       height="774.6416"
+       x="1.6517341"
+       y="-1.6777457" />
+    <path
+       sodipodi:type="star"
+       style="fill:#000000"
+       id="path520"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="596.5058"
+       sodipodi:cy="112.63439"
+       sodipodi:r1="172.49857"
+       sodipodi:r2="86.249283"
+       sodipodi:arg1="2.1962667"
+       sodipodi:arg2="2.8245852"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 495.51157,252.47688 514.5541,139.52041 432.29876,59.796876 545.61121,43.001931 596.0145,-59.863474 647.00291,42.713148 760.4092,58.862363 l -81.79988,80.190787 19.68565,112.84617 -101.54352,-53.016 z"
+       inkscape:transform-center-x="0.15182333"
+       inkscape:transform-center-y="-16.327687"
+       transform="translate(81.034682,142.06215)" />
+    <text
+       xml:space="preserve"
+       style="font-size:17.3333px;white-space:pre;inline-size:92.8253;fill:#ffffff"
+       x="545.45374"
+       y="230.28035"
+       id="text738" />
+    <text
+       xml:space="preserve"
+       style="font-size:17.3333px;fill:#ffffff"
+       x="642.55066"
+       y="229.73183"
+       id="text792"><tspan
+         sodipodi:role="line"
+         id="tspan790"
+         x="642.55066"
+         y="229.73183">FUTBIN</tspan><tspan
+         sodipodi:role="line"
+         x="642.55066"
+         y="251.39845"
+         id="tspan794" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:17.3333px;fill:#ffffff"
+       x="661.36737"
+       y="262.86542"
+       id="text798"><tspan
+         sodipodi:role="line"
+         id="tspan796"
+         x="661.36737"
+         y="262.86542">by</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16.4055px;fill:#ffffff;stroke-width:0.946479"
+       x="695.60504"
+       y="253.5864"
+       id="text802"
+       transform="scale(0.86888159,1.1509048)"><tspan
+         sodipodi:role="line"
+         id="tspan800"
+         x="695.60504"
+         y="253.5864"
+         style="stroke-width:0.946479">Louis DUBARLE</tspan><tspan
+         sodipodi:role="line"
+         x="695.60504"
+         y="274.09326"
+         id="tspan804"
+         style="stroke-width:0.946479">Alexandre DA CUNHA</tspan></text>
+    <rect
+       style="fill:#000000"
+       id="rect860"
+       width="461.67487"
+       height="127.63006"
+       x="442.24423"
+       y="444.45953" />
+    <text
+       xml:space="preserve"
+       style="font-size:17.3333px;fill:#ffffff"
+       x="584.29767"
+       y="508.83383"
+       id="text966"><tspan
+         sodipodi:role="line"
+         id="tspan964"
+         x="584.29767"
+         y="508.83383">Click here to continue</tspan></text>
+  </g>
+</svg>

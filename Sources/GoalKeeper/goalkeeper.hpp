@@ -6,7 +6,7 @@
 
 // Not sure about hte physicality though ...
 typedef enum stat_GK_t {
-    RATING, DIVING, HANDLING, KICKING, REFLEXES, SPEED, POSITIONING
+    RATING_GK, DIVING, HANDLING, KICKING, REFLEXES, SPEED, POSITIONING
 }stat_GK_t;
 
 class Goalkeeper : public Player{
