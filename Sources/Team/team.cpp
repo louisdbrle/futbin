@@ -19,3 +19,17 @@ Team::Team(Coach& coach)
     _vect_historic_match.reserve(10);
     _ptr_coach = &coach;
 }
+
+void Team::print_team() {
+    std::cout << "TODO : Not implemented yet < print_team(), team.cpp >"  << std::endl;
+}
+
+void Team::add_to_team(Player* player)
+{
+    std::cout << "TODO : Not implemented yet < add_to_team(), team.cpp >" << std::endl;
+}
+
+void Team::remove_from_team(Player* player)
+{
+    std::cout << "TODO : Not implemented yet < remove_from_team(), team.cpp >" << std::endl;
+}

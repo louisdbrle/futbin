@@ -34,6 +34,8 @@ public:
     std::string get_club() { return _club; }
     std::string get_national() { return _national; }
     poste_t get_position() { return _position; }
+    
+    void print_player();
 
 private:
     std::string _club;

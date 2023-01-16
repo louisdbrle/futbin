@@ -10,6 +10,8 @@ class Coach : public People{
         //~Coach();
 
         std::string get_team(){ return _team;}
+        
+        void print_coach();
 
     private:
         std::string _team;
