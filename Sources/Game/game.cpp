@@ -1,12 +1,11 @@
 #include "game.hpp"
 
 // TODO : add a fonction to launch the match, and select the team to play the match
-Game::Game(User* ptr_user_dom, User* ptr_user_ext) : _ptr_user_dom(ptr_user_dom), _ptr_user_ext(ptr_user_ext)
-{
+Game::Game(User* ptr_user_dom, User* ptr_user_ext): _ptr_user_dom(ptr_user_dom), _ptr_user_ext(ptr_user_ext) {
     _ptr_winner = _ptr_user_dom;
 }
 
-/* Methode to use the match class in order to designate a winner User  : 
+/* Methode to use the match class in order to designate a winner User  :
 
 play_game(int index_team_dom, int index_team_ext){
 
@@ -18,11 +17,10 @@ play_game(int index_team_dom, int index_team_ext){
     if (team_dom ==  match.get_ptr_team_win() ) {
         _ptr_winner = _ptr_user_dom;
     }
-    else { 
+    else {
         _ptr_winner = _ptr_user_ext;
     }
 
 }
-    
-*/
 
+*/

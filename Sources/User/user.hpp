@@ -14,8 +14,7 @@ class Game;
 #include "../Game/game.hpp"
 
 
-class User
-{
+class User {
 public:
     User();
     //~User();

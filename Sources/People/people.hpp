@@ -2,8 +2,7 @@
 
 #include <iostream>
 
-class People
-{
+class People {
 public:
     People();
     People(std::string name, std::string last_name, u_short age, std::string nationality);

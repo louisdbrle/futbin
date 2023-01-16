@@ -3,8 +3,7 @@
 #include <iostream>
 #include "../People/people.hpp"
 
-typedef enum poste_t
-{
+typedef enum poste_t {
     GK,
     RB,
     RWB,
@@ -24,8 +23,7 @@ typedef enum poste_t
     ST
 } poste_t;
 
-class Player : public People
-{
+class Player: public People {
 public:
     Player();
     Player(std::string name, std::string last_name, u_short age, std::string nationality, std::string club, std::string national, poste_t position);
@@ -34,7 +32,7 @@ public:
     std::string get_club() { return _club; }
     std::string get_national() { return _national; }
     poste_t get_position() { return _position; }
-    
+
     void print_player();
 
 private:

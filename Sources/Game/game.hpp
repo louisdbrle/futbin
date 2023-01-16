@@ -5,8 +5,7 @@ class User;
 #include <iostream>
 #include "../User/user.hpp"
 
-class Game
-{
+class Game {
 public:
     //Game();
     Game(User* ptr_user_dom, User* ptr_user_ext);

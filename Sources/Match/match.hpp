@@ -6,8 +6,7 @@
 
 
 
-class Match
-{
+class Match {
 public:
     //Match();
     Match(Team* ptr_team_dom, Team* ptr_team_ext);
