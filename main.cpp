@@ -4,6 +4,7 @@
 #include "Sources/GoalKeeper/goalkeeper.hpp"
 #include "Sources/FieldPlayer/fieldplayer.hpp"
 
+#define TEST true
 
 // Db loading function segment
 std::vector<Player> load_db_players() {
@@ -100,40 +101,47 @@ int main(int argc, char** argv) {
 
     srand(time(NULL));
 
+    // Application variable
     std::vector<Player> Db_players = load_db_players();
     std::vector<Coach> Db_coachs = load_db_coachs();
     std::vector<User> Db_users = load_db_users();
     User* current_user;
 
-    Goalkeeper goal = Goalkeeper("GOALKEEPER", "_", 255, "FRENCH", "FC JUSSIEU", "FRANCE");
-    FieldPlayer fieldplayer = FieldPlayer("FIELDPLAYER", "_", 255, "FRENCH", "FC JUSSIEU", "FRANCE", ST);
+    if (TEST) {
+        // Object creation for testing purpuses
+        Goalkeeper goal = Goalkeeper("GOALKEEPER", "_", 255, "FRENCH", "FC JUSSIEU", "FRANCE");
+        FieldPlayer fieldplayer = FieldPlayer("FIELDPLAYER", "_", 255, "FRENCH", "FC JUSSIEU", "FRANCE", ST);
+        Coach coach = Coach("COACH", "_", 255, "FRENCH", "FRANCE");
 
-    Coach coach = Coach("COACH", "_", 255, "FRENCH", "FRANCE");
+        User user_1 = User();
+        User user_2 = User();
 
-    User user_1 = User();
-    User user_2 = User();
+        // Application variable update
+        Db_players.push_back(goal);
+        Db_players.push_back(fieldplayer);
 
-    Db_players.push_back(goal);
-    Db_players.push_back(fieldplayer);
+        Db_coachs.push_back(coach);
 
-    Db_coachs.push_back(coach);
+        Db_users.push_back(user_1);
+        Db_users.push_back(user_2);
 
-    Db_users.push_back(user_1);
-    Db_users.push_back(user_2);
 
-    current_user = &Db_users[0];
-    std::cout << current_user->get_name() << "\n" << std::endl;
+        current_user = &Db_users[0];
+        std::cout << current_user->get_name() << "\n" << std::endl;
 
-    print_db_players(&Db_players);
-    print_db_coachs(&Db_coachs);
-    print_db_users(&Db_users);
+        print_db_players(&Db_players);
+        print_db_coachs(&Db_coachs);
+        print_db_users(&Db_users);
 
-    get_rand_player(&Db_players)->print_player();
-    std::cout << "\n" << std::endl;
+        get_rand_player(&Db_players)->print_player();
+        std::cout << "\n" << std::endl;
 
-    current_user->get_vect_team()[0]->add_to_team(&goal);
-    current_user->get_vect_team()[0]->add_to_team(&goal);
-    
-    current_user->get_vect_team()[0]->print_team();
+        current_user->get_vect_team()[0]->add_to_team(&goal);
+        current_user->get_vect_team()[0]->add_to_team(&goal);
+
+        current_user->get_vect_team()[0]->print_team();
+    }
+
+
     return 0;
 }

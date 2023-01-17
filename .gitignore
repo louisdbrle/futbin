@@ -1,3 +1,4 @@
-.DS_Store
-.bin
-.o
+.DS_STORE
+.vscode
+*.bin
+Sources/*/*.o
