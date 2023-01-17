@@ -13,7 +13,7 @@ TST_DIR=Tests/
 TST= $(wildcard $(TST_DIR)/*.cpp)
 
 OBJ_TEST = $(filter-out main.o, $(OBJ)) $(TST:.cpp=.o)
-EXEC= executable.bin
+EXEC= main
 
 
 all: $(EXEC)
