@@ -9,6 +9,6 @@ Coach::Coach(std::string name, std::string last_name, u_short age, std::string n
 }
 
 void Coach::print_coach() {
-    std::cout << "Coach : name = " << this->get_name() << ", last name = "<< this->get_last_name();
-    std::cout << ", age = " << this->get_age() << ", nationality = "<< this->get_nationality() << ", team = " << this->get_team() << std::endl;
+    std::cout << "Coach : name = " << _name << ", last name = " << _last_name;
+    std::cout << ", age = " << _age << ", nationality = " << _nationality << ", team = " << _team << std::endl;
 }

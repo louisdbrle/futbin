@@ -37,34 +37,34 @@ std::vector<User> load_db_users() {
 }
 
 // Draw cards function segment
-Player* get_rand_player() {
-    std::cerr << "TODO : Not implemented yet < get_rand_player , main.cpp >" << std::endl;
-    return NULL;
+Player* get_rand_player(std::vector<Player>* db_players) {
+    //std::cerr << "TODO : Not implemented yet < get_rand_player , main.cpp >" << std::endl;
+    return &db_players->at(std::rand() % db_players->size());
 }
 
-std::vector<Player*> draw_player_card() {
+std::vector<Player*> draw_player_card(std::vector<Player>* db_players) {
 
     std::vector<Player*> vect;
     vect.reserve(6);
 
     for (u_int32_t i = 0; i < vect.size(); i++) {
-        vect.push_back(get_rand_player());
+        vect.push_back(get_rand_player(db_players));
     }
     return vect;
 }
 
-Coach* get_rand_coach() {
-    std::cerr << "TODO : Not implemented yet < get_rand_coach , main.cpp >" << std::endl;
-    return NULL;
+Coach* get_rand_coach(std::vector<Coach>* db_coachs) {
+    //std::cerr << "TODO : Not implemented yet < get_rand_coach , main.cpp >" << std::endl;
+    return &db_coachs->at(std::rand() % db_coachs->size());
 }
 
-std::vector<Coach*> draw_coach_card() {
+std::vector<Coach*> draw_coach_card(std::vector<Coach>* db_coachs) {
 
     std::vector<Coach*> vect;
     vect.reserve(3);
 
     for (u_int32_t i = 0; i < vect.size(); i++) {
-        vect.push_back(get_rand_coach());
+        vect.push_back(get_rand_coach(db_coachs));
     }
     return vect;
 }
@@ -98,6 +98,8 @@ void print_db_users(std::vector<User>* db_users) {
 // Main function
 int main(int argc, char** argv) {
 
+    srand(time(NULL));
+
     std::vector<Player> Db_players = load_db_players();
     std::vector<Coach> Db_coachs = load_db_coachs();
     std::vector<User> Db_users = load_db_users();
@@ -105,6 +107,7 @@ int main(int argc, char** argv) {
 
     Goalkeeper goal = Goalkeeper("GOALKEEPER", "_", 255, "FRENCH", "FC JUSSIEU", "FRANCE");
     FieldPlayer fieldplayer = FieldPlayer("FIELDPLAYER", "_", 255, "FRENCH", "FC JUSSIEU", "FRANCE", ST);
+
     Coach coach = Coach("COACH", "_", 255, "FRENCH", "FRANCE");
 
     User user_1 = User();
@@ -112,17 +115,25 @@ int main(int argc, char** argv) {
 
     Db_players.push_back(goal);
     Db_players.push_back(fieldplayer);
+
     Db_coachs.push_back(coach);
 
     Db_users.push_back(user_1);
     Db_users.push_back(user_2);
 
     current_user = &Db_users[0];
-    std::cout << current_user->get_name() << "\n" <<std::endl;
+    std::cout << current_user->get_name() << "\n" << std::endl;
 
     print_db_players(&Db_players);
     print_db_coachs(&Db_coachs);
     print_db_users(&Db_users);
 
+    get_rand_player(&Db_players)->print_player();
+    std::cout << "\n" << std::endl;
+
+    current_user->get_vect_team()[0]->add_to_team(&goal);
+    current_user->get_vect_team()[0]->add_to_team(&goal);
+    
+    current_user->get_vect_team()[0]->print_team();
     return 0;
 }

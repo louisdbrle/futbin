@@ -17,13 +17,24 @@ Team::Team(Coach& coach) {
 }
 
 void Team::print_team() {
-    std::cout << "TODO : Not implemented yet < print_team(), team.cpp >" << std::endl;
+
+    for (std::vector<Player*>::size_type i = 0; i < _vect_player.size(); i++) {
+        _vect_player[i]->print_player();
+    }
+    std::cout << "\n" << std::endl;
 }
 
 void Team::add_to_team(Player* player) {
-    std::cout << "TODO : Not implemented yet < add_to_team(), team.cpp >" << std::endl;
+    _vect_player.push_back(player);
 }
 
 void Team::remove_from_team(Player* player) {
-    std::cout << "TODO : Not implemented yet < remove_from_team(), team.cpp >" << std::endl;
+    std::vector<Player*>::iterator it = _vect_player.begin();
+    for (auto i : _vect_player) {
+        if (i == player) {
+            _vect_player.erase(it);
+        }
+        it++;
+    }
+    //std::cout << "TODO : Not implemented yet < remove_from_team(), team.cpp >" << std::endl;
 }
