@@ -4,7 +4,7 @@
 #include "Sources/GoalKeeper/goalkeeper.hpp"
 #include "Sources/FieldPlayer/fieldplayer.hpp"
 
-#define TEST true
+#define TEST false
 
 // Db loading function segment
 std::vector<Player> load_db_players() {
