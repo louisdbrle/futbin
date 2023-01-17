@@ -25,6 +25,7 @@ public:
     std::vector <Game*> get_vect_historic_game() { return _vect_historic_game; }
     std::string get_name() { return _name; }
 
+    void print_user();
     void print_collection();
 
 private:

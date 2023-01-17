@@ -13,7 +13,7 @@ public:
     u_short get_age() { return _age; }
     std::string get_nationality() { return _nationality; }
 
-private:
+protected:
     std::string _name;
     std::string _last_name;
     u_short _age;

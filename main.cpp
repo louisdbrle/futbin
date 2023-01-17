@@ -4,13 +4,24 @@
 #include "Sources/GoalKeeper/goalkeeper.hpp"
 #include "Sources/FieldPlayer/fieldplayer.hpp"
 
+
 // Db loading function segment
 std::vector<Player> load_db_players() {
     // read in json a player, create new players, add in at the end of the vect_db_player
     std::vector<Player> vect;
     vect.reserve(6);
 
-    std::cerr << "TODO : Not implemented yet < load_db_players , main.cpp >" << std::endl;
+    std::cerr << "TODO : Not implemented yet < load_db_players , main.cpp >\n" << std::endl;
+
+    return vect;
+}
+
+std::vector<Coach> load_db_coachs() {
+    // read in json a user, create new user, add in at the end of the vect_db_user
+    std::vector<Coach> vect;
+    vect.reserve(6);
+
+    std::cerr << "TODO : Not implemented yet < load_db_coachs , main.cpp >\n" << std::endl;
 
     return vect;
 }
@@ -20,7 +31,7 @@ std::vector<User> load_db_users() {
     std::vector<User> vect;
     vect.reserve(6);
 
-    std::cerr << "TODO : Not implemented yet < load_db_users , main.cpp >" << std::endl;
+    std::cerr << "TODO : Not implemented yet < load_db_users , main.cpp >\n" << std::endl;
 
     return vect;
 }
@@ -58,44 +69,60 @@ std::vector<Coach*> draw_coach_card() {
     return vect;
 }
 
+
 // Debug printing function
-void print_users(std::vector<User>* db_users) {
-    for (std::vector<User>::size_type i = 0; i < db_users->size(); i++) {
-        std::cout << "Le nom du coach " << i << " est : " << (*db_users)[i].get_name() << "\n";
+void print_db_players(std::vector<Player>* db_players) {
+    for (std::vector<User>::size_type i = 0; i < db_players->size(); i++) {
+        (*db_players)[i].print_player();
     }
     std::cout << std::endl;
 }
 
-void print_players(std::vector<Player>* db_players) {
-    for (std::vector<User>::size_type i = 0; i < db_players->size(); i++) {
-        std::cout << "Le nom du joueur " << i << " est : " << (*db_players)[i].get_name() << "\n";
+void print_db_coachs(std::vector<Coach>* db_coachs) {
+    for (std::vector<User>::size_type i = 0; i < db_coachs->size(); i++) {
+        (*db_coachs)[i].print_coach();
     }
     std::cout << std::endl;
 }
+
+void print_db_users(std::vector<User>* db_users) {
+    for (std::vector<User>::size_type i = 0; i < db_users->size(); i++) {
+        (*db_users)[i].print_user();
+    }
+    std::cout << std::endl;
+}
+
+
+
 
 // Main function
 int main(int argc, char** argv) {
 
     std::vector<Player> Db_players = load_db_players();
+    std::vector<Coach> Db_coachs = load_db_coachs();
     std::vector<User> Db_users = load_db_users();
     User* current_user;
 
-    Goalkeeper goal = Goalkeeper("GOALKEEPER", "_", u_short(255), "FRENCH", "FC JUSSIEU", "FRANCE");
-    FieldPlayer fieldplayer = FieldPlayer("FIELDPLAYER", "_", u_short(255), "FRENCH", "FC JUSSIEU", "FRANCE", ST);
-    std::cout << goal.get_national() << std::endl;
-
-    Db_players.push_back(goal);
-    Db_players.push_back(fieldplayer);
+    Goalkeeper goal = Goalkeeper("GOALKEEPER", "_", 255, "FRENCH", "FC JUSSIEU", "FRANCE");
+    FieldPlayer fieldplayer = FieldPlayer("FIELDPLAYER", "_", 255, "FRENCH", "FC JUSSIEU", "FRANCE", ST);
+    Coach coach = Coach("COACH", "_", 255, "FRENCH", "FRANCE");
 
     User user_1 = User();
     User user_2 = User();
+
+    Db_players.push_back(goal);
+    Db_players.push_back(fieldplayer);
+    Db_coachs.push_back(coach);
 
     Db_users.push_back(user_1);
     Db_users.push_back(user_2);
 
     current_user = &Db_users[0];
-    std::cout << current_user->get_name() << std::endl;
+    std::cout << current_user->get_name() << "\n" <<std::endl;
 
-    print_users(&Db_users);
+    print_db_players(&Db_players);
+    print_db_coachs(&Db_coachs);
+    print_db_users(&Db_users);
+
     return 0;
 }
