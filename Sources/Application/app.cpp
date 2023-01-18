@@ -20,18 +20,18 @@ void Application::load_db_coachs() {
 }
 
 void Application::select_user(uint64_t user_id) {
-    if ( user_id > Db_users.size() ) {
+    if (user_id > db_users.size()) {
         std::cerr << "ERROR : The user_id you are looking for is not attributed < select_user , app.cpp >\n" << std::endl;
     }
     else {
-        current_user = &Db_users[i];
+        current_user = &db_users[user_id];
     }
-    
+
 }
 
 
 Player* Application::get_rand_player() {
-    return &db_players->at(std::rand() % db_players->size());
+    return &db_players.at(std::rand() % db_players.size());
 }
 
 std::vector<Player*> Application::draw_player_card() {
@@ -57,7 +57,7 @@ std::vector<Player*> Application::draw_player_card(uint8_t nb_card) {
 }
 
 Coach* Application::get_rand_coach() {
-    return &db_coachs->at(std::rand() % db_coachs->size());
+    return &db_coachs.at(std::rand() % db_coachs.size());
 }
 
 std::vector<Coach*> Application::draw_coach_card() {
@@ -84,22 +84,22 @@ std::vector<Coach*> Application::draw_coach_card(uint8_t nb_card) {
 
 
 void Application::print_db_players() {
-    for (std::vector<User>::size_type i = 0; i < db_players->size(); i++) {
-        (*db_players)[i].print_player();
+    for (std::vector<User>::size_type i = 0; i < db_players.size(); i++) {
+        db_players[i].print_player();
     }
     std::cout << std::endl;
 }
 
 void Application::print_db_coachs() {
-    for (std::vector<User>::size_type i = 0; i < db_coachs->size(); i++) {
-        (*db_coachs)[i].print_coach();
+    for (std::vector<User>::size_type i = 0; i < db_coachs.size(); i++) {
+        db_coachs[i].print_coach();
     }
     std::cout << std::endl;
 }
 
 void Application::print_db_users() {
-    for (std::vector<User>::size_type i = 0; i < Db_users->size(); i++) {
-        (*Db_users)[i].print_user();
+    for (std::vector<User>::size_type i = 0; i < db_users.size(); i++) {
+        db_users[i].print_user();
     }
     std::cout << std::endl;
 }

@@ -1,13 +1,13 @@
 #pragma once
 
-#include "Sources/Team/team.hpp"
-#include "Sources/GoalKeeper/goalkeeper.hpp"
-#include "Sources/FieldPlayer/fieldplayer.hpp"
+#include "../Team/team.hpp"
+#include "../GoalKeeper/goalkeeper.hpp"
+#include "../FieldPlayer/fieldplayer.hpp"
 
 class Application {
 public:
     Application();
-    ~Application();
+    //~Application();
 
     std::vector<Player> db_players;
     std::vector<Coach> db_coachs;
