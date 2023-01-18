@@ -15,19 +15,19 @@ int main(int argc, char** argv) {
         // ---Application variable--- //
         Application app = Application();
 
-        // ---Object creation for testing purpuses--- //                                                                    // This whole code is not supposed to happen this way.
-        Goalkeeper goal = Goalkeeper("GOALKEEPER", "_", 255, "FRENCH", "FC JUSSIEU", "FRANCE");                             // The Application app = Application () issupposed to do this job.
-        FieldPlayer fieldplayer = FieldPlayer("FIELDPLAYER", "_", 255, "FRENCH", "FC JUSSIEU", "FRANCE", ST);               //  
-        Coach coach = Coach("COACH", "_", 255, "FRENCH", "FRANCE");                                                         // 
-        User user_1 = User();                                                                                               //
-        User user_2 = User();                                                                                               //
-                                                                                                                            //
-        // ---Application variable update--- //                                                                             //
-        app.db_players.push_back(goal);                                                                                     //
-        app.db_players.push_back(fieldplayer);                                                                              //
-        app.db_coachs.push_back(coach);                                                                                     //
-        app.db_users.push_back(user_1);                                                                                     //
-        app.db_users.push_back(user_2);                                                                                     //
+        // ---Object creation for testing purpuses--- //                                                                        // This whole code is not supposed to happen this way.
+        Goalkeeper goal = Goalkeeper("GOALKEEPER", "_", 255, "FRENCH", "FC JUSSIEU", "FRANCE");                                 // The Application app = Application () issupposed to do this job.
+        FieldPlayer fieldplayer = FieldPlayer("FIELDPLAYER", "_", 255, "FRENCH", "FC JUSSIEU", "FRANCE", ST);                   //  
+        Coach coach = Coach("COACH", "_", 255, "FRENCH", "FRANCE");                                                             // 
+        User user_1 = User();                                                                                                   //
+        User user_2 = User();                                                                                                   //
+                                                                                                                                //
+        // ---Application variable update--- //                                                                                 //
+        app.db_players.push_back(goal);                                                                                         //
+        app.db_players.push_back(fieldplayer);                                                                                  //
+        app.db_coachs.push_back(coach);                                                                                         //
+        app.db_users.push_back(user_1);                                                                                         //
+        app.db_users.push_back(user_2);                                                                                         //
 
         // ---User selection usage--- //
         app.select_user(0);

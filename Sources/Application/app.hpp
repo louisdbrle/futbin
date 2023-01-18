@@ -7,7 +7,7 @@
 class Application {
 public:
     Application();
-    //~Application();
+    ~Application();
 
     std::vector<Player> db_players;
     std::vector<Coach> db_coachs;

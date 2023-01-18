@@ -6,6 +6,9 @@ Application::Application() {
     this->load_db_coachs();
 }
 
+Application::~Application() {
+    delete [] current_user;
+}
 
 void Application::load_db_users() {
     std::cerr << "TODO : Not implemented yet < load_db_players , app.cpp >\n" << std::endl;
