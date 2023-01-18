@@ -9,15 +9,16 @@ int main(int argc, char** argv) {
 
     // srand(time(NULL));
 
-    // ---Application variable--- //
-    Application app = Application();
-
     if (TEST) {
+        std::cout << " START of the programme running in test mode \n\n\n" << std::endl;
+
+        // ---Application variable--- //
+        Application app = Application();
 
         // ---Object creation for testing purpuses--- //                                                                    // This whole code is not supposed to happen this way.
-        Goalkeeper goal = Goalkeeper("GOALKEEPER", "_", 255, "FRENCH", "FC JUSSIEU", "FRANCE");                             // The load_db_*() are supposed to do this job.
-        FieldPlayer fieldplayer = FieldPlayer("FIELDPLAYER", "_", 255, "FRENCH", "FC JUSSIEU", "FRANCE", ST);               // We create card and directcly put them at the 
-        Coach coach = Coach("COACH", "_", 255, "FRENCH", "FRANCE");                                                         // end of the vector.
+        Goalkeeper goal = Goalkeeper("GOALKEEPER", "_", 255, "FRENCH", "FC JUSSIEU", "FRANCE");                             // The Application app = Application () issupposed to do this job.
+        FieldPlayer fieldplayer = FieldPlayer("FIELDPLAYER", "_", 255, "FRENCH", "FC JUSSIEU", "FRANCE", ST);               //  
+        Coach coach = Coach("COACH", "_", 255, "FRENCH", "FRANCE");                                                         // 
         User user_1 = User();                                                                                               //
         User user_2 = User();                                                                                               //
                                                                                                                             //
@@ -29,7 +30,7 @@ int main(int argc, char** argv) {
         app.db_users.push_back(user_2);                                                                                     //
 
         // ---User selection usage--- //
-        app.current_user = &app.db_users[0];
+        app.select_user(0);
         std::cout << app.current_user->get_name() << "\n" << std::endl;
 
         // ---Db printing--- //
@@ -39,12 +40,20 @@ int main(int argc, char** argv) {
 
         // ---Add of player in the team 0 of the current_user--- //
         app.current_user->get_vect_team()[0]->add_to_team(&goal);
-        app.current_user->get_vect_team()[0]->add_to_team(&goal);
-
+        
         // ---Printing of team 0's current_user for debugging--- //
         app.current_user->get_vect_team()[0]->print_team();
-    }
 
+        std::cout << " END of the programme running in test mode \n\n\n" << std::endl;
+    }
+    else{
+        std::cout << " START of the programme running in release mode \n\n\n" << std::endl;
+
+        // ---Application variable--- //
+        Application app = Application();
+
+        std::cout << " END of the programme running in release mode \n\n\n" << std::endl;
+    }
 
     return 0;
 }
