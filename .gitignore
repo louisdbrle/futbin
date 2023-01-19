@@ -5,3 +5,4 @@ main
 .gitignore
 run.sh
 clean.sh
+db/*
