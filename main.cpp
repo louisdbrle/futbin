@@ -36,7 +36,7 @@ int main(int argc, char** argv) {
         // ---Db printing--- //
         app.print_db_players();
         app.print_db_coachs();
-        app.print_db_users();
+        //app.print_db_users();
 
         // ---Add of player in the team 0 of the current_user--- //
         //app.current_user->get_vect_team()[0]->add_to_team(&goal);

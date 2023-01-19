@@ -21,7 +21,7 @@ void Application::load_db_users() {
 void Application::load_db_players() {
 
     std::ifstream file;
-    file.open("db/clean_player_db_sample.csv");
+    file.open("db/clean_player_db.csv");
 
     if (!file) {
         std::cerr << "Can not open file \n" << std::endl;
@@ -45,14 +45,14 @@ void Application::load_db_players() {
 
             }
             else if (vect_string[4] == "GK") {
-                Goalkeeper new_player = Goalkeeper(vect_string[1], "last name", 255, vect_string[2], "club", "national");
+                Goalkeeper new_player = Goalkeeper(vect_string[1], "-", 255, vect_string[2], "-", "-");
                 db_players.push_back(new_player);
             }
             else {
-                FieldPlayer new_player = FieldPlayer(vect_string[1], "last_name", 255, vect_string[2], "club", "national", vect_string[4]);
+                FieldPlayer new_player = FieldPlayer(vect_string[1], "-", 255, vect_string[2], "-", "-", vect_string[4]);
                 db_players.push_back(new_player);
             }
-            
+
             vect_string.clear();
         }
     }
@@ -61,7 +61,41 @@ void Application::load_db_players() {
 }
 
 void Application::load_db_coachs() {
-    std::cerr << "TODO : Not implemented yet < load_db_coachs , app.cpp >\n" << std::endl;
+
+    std::ifstream file;
+    file.open("db/clean_coach_db_sample.csv");
+
+    if (!file) {
+        std::cerr << "Can not open file \n" << std::endl;
+        exit(1);
+    }
+
+    else {
+
+        std::string delim = ",";
+        std::string line;
+        while (getline(file, line)) {
+
+            std::vector<std::string> vect_string;
+            for (uint8_t i = 0; i < 6; i++) {
+
+                vect_string.push_back(line.substr(0, line.find(delim)));
+                line.erase(0, line.find(delim) + delim.length());
+            }
+
+            if (vect_string[0] == "id") {
+
+            }
+            else {
+                Coach new_coach = Coach(vect_string[1], vect_string[2], std::stoi(vect_string[3]), vect_string[4], vect_string[5]);
+                db_coachs.push_back(new_coach);
+            }
+            vect_string.clear();
+        }
+    }
+
+    file.close();
+
 }
 
 void Application::select_user(uint64_t user_id) {
