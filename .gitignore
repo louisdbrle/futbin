@@ -6,3 +6,4 @@ main
 run.sh
 clean.sh
 db/*
+*.csv

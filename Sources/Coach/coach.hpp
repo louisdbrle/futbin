@@ -6,7 +6,7 @@
 class Coach: public People {
 public:
 	Coach();
-	Coach(std::string name, std::string last_name, u_short age, std::string nationality, std::string team);
+	Coach(uint64_t _id, std::string name, std::string last_name, u_short age, std::string nationality, std::string team);
 	//~Coach();
 
 	std::string get_team() { return _team; }

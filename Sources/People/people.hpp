@@ -5,7 +5,7 @@
 class People {
 public:
     People();
-    People(std::string name, std::string last_name, u_short age, std::string nationality);
+    People(uint64_t _id, std::string name, std::string last_name, u_short age, std::string nationality);
     //~People();
 
     std::string get_name() { return _name; }
@@ -14,6 +14,7 @@ public:
     std::string get_nationality() { return _nationality; }
 
 protected:
+    uint64_t _id;
     std::string _name;
     std::string _last_name;
     u_short _age;

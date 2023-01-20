@@ -13,7 +13,7 @@ public:
     FieldPlayer();
 
     // TODO : might need to had a pointer to a array containing the stats.
-    FieldPlayer(std::string name, std::string last_name, u_short age, std::string nationality, std::string club, std::string national, std::string position);
+    FieldPlayer(uint64_t id, std::string name, std::string last_name, u_short age, std::string nationality, std::string club, std::string national, std::string position);
     //~FieldPlayer();
 
     std::map<stat_FP_t, char>* get_stats() { return _stats; }

@@ -16,6 +16,7 @@ Application::~Application() {
 
 void Application::load_db_users() {
     std::cerr << "TODO : Not implemented yet < load_db_users , app.cpp >\n" << std::endl;
+    std::cerr << "---- Have to take sometime to think about that, as it is harder due to pointer usage --- \n" << std::endl;
 }
 
 void Application::load_db_players() {
@@ -45,11 +46,11 @@ void Application::load_db_players() {
 
             }
             else if (vect_string[4] == "GK") {
-                Goalkeeper new_player = Goalkeeper(vect_string[1], "-", 255, vect_string[2], "-", "-");
+                Goalkeeper new_player = Goalkeeper(std::stoi(vect_string[0]), vect_string[1], "-", 255, vect_string[2], "-", "-");
                 db_players.push_back(new_player);
             }
             else {
-                FieldPlayer new_player = FieldPlayer(vect_string[1], "-", 255, vect_string[2], "-", "-", vect_string[4]);
+                FieldPlayer new_player = FieldPlayer(std::stoi(vect_string[0]), vect_string[1], "-", 255, vect_string[2], "-", "-", vect_string[4]);
                 db_players.push_back(new_player);
             }
 
@@ -87,7 +88,7 @@ void Application::load_db_coachs() {
 
             }
             else {
-                Coach new_coach = Coach(vect_string[1], vect_string[2], std::stoi(vect_string[3]), vect_string[4], vect_string[5]);
+                Coach new_coach = Coach(std::stoi(vect_string[0]), vect_string[1], vect_string[2], std::stoi(vect_string[3]), vect_string[4], vect_string[5]);
                 db_coachs.push_back(new_coach);
             }
             vect_string.clear();

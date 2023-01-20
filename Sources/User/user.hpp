@@ -35,3 +35,4 @@ private:
     std::vector <Game*> _vect_historic_game;
     std::string _name;
 };
+

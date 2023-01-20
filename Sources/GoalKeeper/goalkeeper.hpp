@@ -14,7 +14,7 @@ public:
     Goalkeeper();
 
     // TODO : might need to had a pointer to a array containing the stats.
-    Goalkeeper(std::string name, std::string last_name, u_short age, std::string nationality, std::string club, std::string national);
+    Goalkeeper(uint64_t id, std::string name, std::string last_name, u_short age, std::string nationality, std::string club, std::string national);
     //~Goalkeeper();
 
     std::map<stat_GK_t, char>* get_stats() { return _stats; }
