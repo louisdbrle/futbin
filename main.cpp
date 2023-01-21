@@ -15,19 +15,19 @@ int main(int argc, char** argv) {
         // ---Application variable--- //
         Application app = Application();
 
-        User user_1 = User();                                                                                                 
-        User user_2 = User();                                                                                                                                                                                    
-        app.db_users.push_back(user_1);                                                                                       
-        app.db_users.push_back(user_2);                                                                                       
+        //User user_1 = User();                                                                                                 
+        //User user_2 = User();                                                                                                                                                                                    
+        //app.db_users.push_back(user_1);                                                                                       
+        //app.db_users.push_back(user_2);                                                                                       
 
         // ---User selection usage--- //
         //app.select_user(0);
         //std::cout << app.current_user->get_name() << "\n" << std::endl;
 
         // ---Db printing--- //
-        app.print_db_players();
-        app.print_db_coachs();
-        app.print_db_users(); // 
+        //app.print_db_players();
+        //app.print_db_coachs();
+        app.print_db_users(); 
 
         // ---Add of player in the team 0 of the current_user--- //
         //app.current_user->get_vect_team()[0]->add_to_team(&goal);
