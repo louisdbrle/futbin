@@ -10,7 +10,7 @@ class Match {
 public:
     //Match();
     Match(Team* ptr_team_dom, Team* ptr_team_ext);
-    //~Match();
+    ~Match();
 
     Team* get_ptr_team_dom() { return _ptr_team_dom; }
     Team* get_ptr_team_ext() { return _ptr_team_ext; }

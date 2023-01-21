@@ -26,7 +26,7 @@ typedef enum poste_t {
 class Player: public People {
 public:
     Player();
-    Player(std::string name, std::string last_name, u_short age, std::string nationality, std::string club, std::string national, poste_t position);
+    Player(uint64_t id, std::string name, std::string last_name, u_short age, std::string nationality, std::string club, std::string national, std::string position);
     //~Player();
 
     std::string get_club() { return _club; }

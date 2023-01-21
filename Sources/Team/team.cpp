@@ -16,6 +16,10 @@ Team::Team(Coach& coach) {
     _ptr_coach = &coach;
 }
 
+Team::~Team() {
+    delete [] _ptr_coach;
+}
+
 void Team::print_team() {
 
     for (std::vector<Player*>::size_type i = 0; i < _vect_player.size(); i++) {
