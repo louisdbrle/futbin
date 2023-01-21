@@ -3,6 +3,8 @@
 #include <fstream>
 #include <iostream>
 
+#include "Sources/Application/app.hpp"
+
 #include "Sources/FieldPlayer/fieldplayer.hpp"
 #include "Sources/GoalKeeper/goalkeeper.hpp"
 #include "Sources/Team/team.hpp"
@@ -101,9 +103,8 @@ void print_db_users(std::vector<User>* db_users) {
     std::cout << std::endl;
 }
 
-// Main function
 int main(int argc, char** argv) {
-    srand(time(NULL));
+    // srand(time(NULL));
 
     // Application variable
     std::vector<Player> Db_players = load_db_players();
@@ -126,25 +127,40 @@ int main(int argc, char** argv) {
         Db_players.push_back(goal);
         Db_players.push_back(fieldplayer);
 
-        Db_coachs.push_back(coach);
+        // ---Application variable--- //
+        Application app = Application();
 
-        Db_users.push_back(user_1);
-        Db_users.push_back(user_2);
+        User user_1 = User();                                                                                                 
+        User user_2 = User();                                                                                                                                                                                    
+        app.db_users.push_back(user_1);                                                                                       
+        app.db_users.push_back(user_2);                                                                                       
 
+        // ---User selection usage--- //
+        //app.select_user(0);
+        //std::cout << app.current_user->get_name() << "\n" << std::endl;
+
+        // ---Db printing--- //
+        app.print_db_players();
+        app.print_db_coachs();
+        app.print_db_users(); // 
         current_user = &Db_users[0];
         std::cout << current_user->get_name() << "\n" << std::endl;
+        
+        // ---Add of player in the team 0 of the current_user--- //
+        //app.current_user->get_vect_team()[0]->add_to_team(&goal);
+        
+        // ---Printing of team 0's current_user for debugging--- //
+        //app.current_user->get_vect_team()[0]->print_team();
 
-        print_db_players(&Db_players);
-        print_db_coachs(&Db_coachs);
-        print_db_users(&Db_users);
+        std::cout << " --- END of the programme running in test mode --- \n\n\n" << std::endl;
+    }
+    else{
+        std::cout << " --- START of the programme running in release mode --- \n\n\n" << std::endl;
 
-        get_rand_player(&Db_players)->print_player();
-        std::cout << "\n" << std::endl;
+        // ---Application variable--- //
+        Application app = Application();
 
-        current_user->get_vect_team()[0]->add_to_team(&goal);
-        current_user->get_vect_team()[0]->add_to_team(&goal);
-
-        current_user->get_vect_team()[0]->print_team();
+        std::cout << " --- END of the programme running in release mode --- \n\n\n" << std::endl;
     }
 
     return 0;

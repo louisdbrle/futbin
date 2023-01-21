@@ -9,7 +9,7 @@ class Game {
 public:
     //Game();
     Game(User* ptr_user_dom, User* ptr_user_ext);
-    //~Game();
+    ~Game();
 
     User* get_user_dom() { return _ptr_user_dom; }
     User* get_user_ext() { return _ptr_user_ext; }
