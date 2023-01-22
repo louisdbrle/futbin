@@ -8,7 +8,6 @@
 
 Application::Application() {
     this->load_db_players();
-    this->load_db_coachs();
     this->load_db_users();
 }
 
@@ -80,7 +79,7 @@ void Application::load_db_users() {
         std::vector<Player*> team2;
         std::vector<Player*> team3;
         std::vector<Player*> players;
-        std::vector<Coach*> coachs;
+        std::vector<Card*> cards;
 
         while (getline(file, line)) {
             for (uint8_t i = 0; i < 255; i++) {
@@ -108,7 +107,7 @@ void Application::load_db_users() {
                 team2.clear();
                 team3.clear();
                 players.clear();
-                coachs.clear();
+                cards.clear();
 
                 // std::cout << "CREATION OF THE USER RIGHT HERE\n\n";
 
@@ -180,20 +179,6 @@ void Application::load_db_users() {
                             }
                             // std::cout << "\n";
                             break;
-
-                        case 6:
-                            // std::cout << "Coachs : ";
-                            for (std::vector<
-                                     std::vector<std::string>>::size_type j = 1;
-                                 j < vect_vect_string[i].size(); j++) {
-                                // We should have used maps, so that we could
-                                // have easily used ids to find anything.
-                                coachs.push_back(get_coach_by_id(
-                                    std::stoi(vect_vect_string[i][j])));
-                                // std::cout << vect_vect_string[i][j] << " ";
-                            }
-                            // std::cout << "\n";
-                            break;
                     }
 
                     for (std::vector<std::vector<std::string>>::size_type j =
@@ -208,46 +193,13 @@ void Application::load_db_users() {
                 Team* new_team3 = new Team(team3);
 
                 User new_user = User(id, name, new_team1, new_team2, new_team3,
-                                     players, coachs);
+                                     players, cards);
                 db_users.push_back(new_user);
 
                 // std::cout << "\n";
                 cpt = 0;
                 // std::cout << "END OF THE USER\n\n";
             }
-        }
-    }
-
-    file.close();
-}
-
-void Application::load_db_coachs() {
-    std::ifstream file;
-    file.open("db/clean_coach_db_sample.csv");
-
-    if (!file) {
-        std::cerr << "Can not open file \n" << std::endl;
-        exit(1);
-    }
-
-    else {
-        std::string delim = ",";
-        std::string line;
-        while (getline(file, line)) {
-            std::vector<std::string> vect_string;
-            for (uint8_t i = 0; i < 6; i++) {
-                vect_string.push_back(line.substr(0, line.find(delim)));
-                line.erase(0, line.find(delim) + delim.length());
-            }
-
-            if (vect_string[0] == "id") {
-            } else {
-                Coach new_coach = Coach(
-                    std::stoi(vect_string[0]), vect_string[1], vect_string[2],
-                    std::stoi(vect_string[3]), vect_string[4], vect_string[5]);
-                db_coachs.push_back(new_coach);
-            }
-            vect_string.clear();
         }
     }
 
@@ -277,69 +229,9 @@ Player* Application::get_rand_player() {
     return &db_players.at(std::rand() % db_players.size());
 }
 
-std::vector<Player*> Application::draw_player_card() {
-    std::vector<Player*> vect;
-    vect.reserve(6);
-
-    for (u_int32_t i = 0; i < vect.size(); i++) {
-        vect.push_back(get_rand_player());
-    }
-    return vect;
-}
-
-std::vector<Player*> Application::draw_player_card(uint8_t nb_card) {
-    std::vector<Player*> vect;
-    vect.reserve(nb_card);
-
-    for (u_int32_t i = 0; i < vect.size(); i++) {
-        vect.push_back(get_rand_player());
-    }
-    return vect;
-}
-
-Coach* Application::get_coach_by_id(uint64_t id) {
-    for (u_int32_t i = 0; i < db_coachs.size(); i++) {
-        if (db_coachs[i].get_id() == id) {
-            return &db_coachs[i];
-        }
-    }
-    return NULL;
-}
-
-Coach* Application::get_rand_coach() {
-    return &db_coachs.at(std::rand() % db_coachs.size());
-}
-
-std::vector<Coach*> Application::draw_coach_card() {
-    std::vector<Coach*> vect;
-    vect.reserve(3);
-
-    for (u_int32_t i = 0; i < vect.size(); i++) {
-        vect.push_back(get_rand_coach());
-    }
-    return vect;
-}
-
-std::vector<Coach*> Application::draw_coach_card(uint8_t nb_card) {
-    std::vector<Coach*> vect;
-    vect.reserve(nb_card);
-
-    for (u_int32_t i = 0; i < vect.size(); i++) {
-        vect.push_back(get_rand_coach());
-    }
-    return vect;
-}
-
 void Application::print_db_players() {
     for (std::vector<User>::size_type i = 0; i < db_players.size(); i++) {
         db_players[i].print_player();
-    }
-    std::cout << std::endl;
-}
-
-void Application::print_db_coachs() {
-    for (std::vector<User>::size_type i = 0; i < db_coachs.size(); i++) {
-        db_coachs[i].print_coach();
     }
     std::cout << std::endl;
 }
