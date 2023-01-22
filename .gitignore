@@ -3,7 +3,3 @@ main
 *.o
 .vscode
 .gitignore
-run.sh
-clean.sh
-db/*
-*.csv
