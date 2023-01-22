@@ -8,7 +8,6 @@ class Game;
 #include <iostream>
 
 #include "../Card/card.hpp"
-#include "../Game/game.hpp"
 #include "../Player/player.hpp"
 #include "../Team/team.hpp"
 

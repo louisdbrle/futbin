@@ -9,13 +9,10 @@
 
 #define TEST true
 
-
 int main(int argc, char** argv) {
-    
     // srand(time(NULL));
 
     if (TEST) {
-
         // ---Application variable--- //
         Application app = Application();
 
@@ -26,11 +23,8 @@ int main(int argc, char** argv) {
         // ---Db printing--- //
         app.print_db_players();
         app.print_db_users();  //
-        
-        current_user = &Db_users[0];
-        std::cout << current_user->get_name() << "\n" << std::endl;
 
-        app.run();
+        // app.run();
         // ---Add of player in the team 0 of the current_user--- //
         // app.current_user->get_vect_team()[0]->add_to_team(&goal);
 
