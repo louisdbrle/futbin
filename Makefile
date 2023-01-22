@@ -1,7 +1,7 @@
 CC=g++
 CCFLAGS= -Wall -std=c++11 -g -I/opt/homebrew/include -D_GLIBCXX_USE_CXX11_ABI=0 
 LIB_DIR= Libs
-LIBFLAGS= -L/opt/homebrew/lib -ljsoncpp
+LIBFLAGS= -L/opt/homebrew/lib -lSDL2_image -lSDL2_ttf -lSDL2
 
 SRC_DIR=Sources
 SRC= $(wildcard $(SRC_DIR)/*/*.cpp) $(wildcard main.cpp)
