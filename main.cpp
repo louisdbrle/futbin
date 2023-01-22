@@ -118,16 +118,12 @@ int main(int argc, char** argv) {
                         "FRANCE", "ST");
         Coach coach = Coach(12, "COACH", "_", 255, "FRENCH", "FRANCE");
 
-        User user_1 = User();
-        User user_2 = User();
-
         // Application variable update
         Db_players.push_back(goal);
         Db_players.push_back(fieldplayer);
 
         // ---Application variable--- //
         Application app = Application();
-
 
         User user_1 = User();
         User user_2 = User();
