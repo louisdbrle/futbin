@@ -13,6 +13,7 @@ class Coach;
 class Team {
 public:
     Team();
+    Team(std::vector<Player*>& vect_player);
     Team(Team& team);
     Team(Coach& _coach);
     ~Team();

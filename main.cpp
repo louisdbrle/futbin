@@ -128,6 +128,7 @@ int main(int argc, char** argv) {
         // ---Application variable--- //
         Application app = Application();
 
+
         User user_1 = User();
         User user_2 = User();
         app.db_users.push_back(user_1);
