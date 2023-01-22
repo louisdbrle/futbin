@@ -11,13 +11,8 @@
 
 
 int main(int argc, char** argv) {
+    
     // srand(time(NULL));
-
-    // Application variable
-    std::vector<Player> Db_players = load_db_players();
-    std::vector<Coach> Db_coachs = load_db_coachs();
-    std::vector<User> Db_users = load_db_users();
-    User* current_user;
 
     if (TEST) {
 
@@ -35,6 +30,7 @@ int main(int argc, char** argv) {
         current_user = &Db_users[0];
         std::cout << current_user->get_name() << "\n" << std::endl;
 
+        app.run();
         // ---Add of player in the team 0 of the current_user--- //
         // app.current_user->get_vect_team()[0]->add_to_team(&goal);
 

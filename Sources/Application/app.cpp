@@ -242,3 +242,4 @@ void Application::print_db_users() {
     }
     std::cout << std::endl;
 }
+
