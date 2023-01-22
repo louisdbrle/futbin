@@ -1,37 +1,34 @@
 #pragma once
 
-#include "../Team/team.hpp"
-#include "../GoalKeeper/goalkeeper.hpp"
+#include "../Card/card.hpp"
 #include "../FieldPlayer/fieldplayer.hpp"
+#include "../GoalKeeper/goalkeeper.hpp"
+#include "../Team/team.hpp"
+#include "../User/user.hpp"
 
 class Application {
-public:
+   public:
     Application();
     ~Application();
 
     std::vector<Player> db_players;
-    std::vector<Coach> db_coachs;
     std::vector<User> db_users;
+    std::vector<Card> db_cards;
     User* current_user;
 
     // ---Function around App variable --- //
     void load_db_players();
-    void load_db_coachs();
     void load_db_users();
+    void load_db_cards();
     void select_user(uint64_t user_id);
 
-    // ---Draw cards function segment--- //
     Player* get_player_by_id(uint64_t id);
     Player* get_rand_player();
-    std::vector<Player*> draw_player_card();
-    std::vector<Player*> draw_player_card(uint8_t nb_card);
-
-    Coach* get_coach_by_id(uint64_t id);
-    Coach* get_rand_coach();
-    std::vector<Coach*> draw_coach_card();
-    std::vector<Coach*> draw_coach_card(uint8_t nb_card);
 
     void print_db_players();
-    void print_db_coachs();
     void print_db_users();
+
+   private:
+    SDL_Renderer* renderer;
+    SDL_Window* window;
 };

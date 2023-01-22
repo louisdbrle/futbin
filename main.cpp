@@ -5,6 +5,7 @@
 #include "Sources/FieldPlayer/fieldplayer.hpp"
 #include "Sources/GoalKeeper/goalkeeper.hpp"
 #include "Sources/Team/team.hpp"
+#include "Sources/User/user.hpp"
 
 #define TEST true
 
@@ -86,13 +87,6 @@ void print_db_players(std::vector<Player>* db_players) {
     std::cout << std::endl;
 }
 
-void print_db_coachs(std::vector<Coach>* db_coachs) {
-    for (std::vector<User>::size_type i = 0; i < db_coachs->size(); i++) {
-        (*db_coachs)[i].print_coach();
-    }
-    std::cout << std::endl;
-}
-
 void print_db_users(std::vector<User>* db_users) {
     for (std::vector<User>::size_type i = 0; i < db_users->size(); i++) {
         (*db_users)[i].print_user();
@@ -116,18 +110,12 @@ int main(int argc, char** argv) {
         FieldPlayer fieldplayer =
             FieldPlayer(12, "FIELDPLAYER", "_", 255, "FRENCH", "FC JUSSIEU",
                         "FRANCE", "ST");
-        Coach coach = Coach(12, "COACH", "_", 255, "FRENCH", "FRANCE");
-
-        User user_1 = User();
-        User user_2 = User();
-
         // Application variable update
         Db_players.push_back(goal);
         Db_players.push_back(fieldplayer);
 
         // ---Application variable--- //
         Application app = Application();
-
 
         User user_1 = User();
         User user_2 = User();
@@ -140,7 +128,6 @@ int main(int argc, char** argv) {
 
         // ---Db printing--- //
         app.print_db_players();
-        app.print_db_coachs();
         app.print_db_users();  //
         current_user = &Db_users[0];
         std::cout << current_user->get_name() << "\n" << std::endl;
