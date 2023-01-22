@@ -13,9 +13,10 @@ class Coach;
 class Team {
 public:
     Team();
+    Team(std::vector<Player*>& vect_player);
     Team(Team& team);
     Team(Coach& _coach);
-    //~Team();
+    ~Team();
 
     std::vector<Player*> get_vect_player() { return _vect_player; }
     std::vector<Match*> get_vect_historic_match() { return _vect_historic_match; }

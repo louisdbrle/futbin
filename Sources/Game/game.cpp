@@ -5,8 +5,13 @@ Game::Game(User* ptr_user_dom, User* ptr_user_ext): _ptr_user_dom(ptr_user_dom),
     _ptr_winner = _ptr_user_dom;
 }
 
-/* Methode to use the match class in order to designate a winner User  :
+Game::~Game() {
+    delete [] _ptr_user_dom;
+    delete [] _ptr_user_ext;
+    delete [] _ptr_winner;
+}
 
+/* Methode to use the match class in order to designate a winner User  :
 play_game(int index_team_dom, int index_team_ext){
 
     Team* team_dom = _ptr_user_dom -> _vect_team.at(index_team_dom);

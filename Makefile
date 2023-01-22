@@ -1,8 +1,7 @@
 CC=g++
-CCFLAGS= -Wall -Werror -std=c++11 -g
-
-LIB_DIR=Libs
-LIBFLAGS=
+CCFLAGS= -Wall -std=c++11 -g -I/opt/homebrew/include -D_GLIBCXX_USE_CXX11_ABI=0 
+LIB_DIR= Libs
+LIBFLAGS= -L/opt/homebrew/lib -ljsoncpp
 
 SRC_DIR=Sources
 SRC= $(wildcard $(SRC_DIR)/*/*.cpp) $(wildcard main.cpp)
@@ -35,7 +34,7 @@ $(EXEC): $(OBJ)
 -include .depends
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(EXEC)
 
 mrclean:
 	rm -f $(OBJ) $(EXEC)

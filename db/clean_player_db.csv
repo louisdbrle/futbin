@@ -1,0 +1,456 @@
+id,name,commonName,nation,position,rating,pace,shooting,passing,dribbling,defending,physicality
+16906,Virgil van Dijk,van Dijk,Netherlands,CB,92,83,61,73,74,92,88
+16485,Robert Lewandowski,Lewandowski,Poland,ST,92,77,92,81,87,45,84
+16246,Lionel Messi,Messi,Argentina,RW,92,82,90,92,95,35,66
+16378,Lionel Messi,Messi,Argentina,CAM,92,82,90,91,95,35,65
+16944,Rafael Leão,Rafael Leão,Portugal,ST,91,96,85,81,91,34,83
+16856,Heung Min Son,Son,Korea Republic,LW,91,90,91,86,89,44,75
+16198,Robert Lewandowski,Lewandowski,Poland,ST,91,75,91,79,86,44,83
+16340,Cristiano Ronaldo,Ronaldo,Portugal,ST,91,83,89,80,90,37,78
+1284,Lionel Messi,Messi,Argentina,RW,91,81,89,90,94,34,64
+2706,Robert Lewandowski,Lewandowski,Poland,ST,91,75,91,79,86,44,83
+2734,Karim Benzema,Benzema,France,CF,91,80,88,83,87,39,78
+16904,Bruno Fernandes,Bruno Fernandes,Portugal,CAM,90,80,89,91,85,71,80
+16942,Jude Bellingham,Bellingham,England,CM,90,82,82,85,90,85,86
+16402,Casemiro,Casemiro,Brazil,CDM,90,65,75,76,73,88,91
+16440,João Cancelo,Cancelo,Portugal,CM,90,87,77,87,87,84,78
+16568,Bernardo Silva,Silva,Portugal,CAM,90,82,81,87,94,63,71
+16854,Marquinhos,Marquinhos,Brazil,CB,90,81,58,78,78,91,84
+16350,Neymar Jr,Neymar,Brazil,CAM,90,88,85,86,94,38,63
+417,Heung Min Son,Son,Korea Republic,LW,90,89,90,84,87,43,71
+194,Virgil van Dijk,van Dijk,Netherlands,CB,90,81,60,71,72,91,86
+249,Cristiano Ronaldo,Ronaldo,Portugal,ST,90,81,92,78,85,34,75
+16903,Marco Asensio,Asensio,Spain,ST,89,91,86,84,89,49,70
+16920,Aymeric Laporte,Laporte,Spain,CB,89,82,53,75,72,90,87
+16941,Lautaro Martínez,Martínez,Argentina,ST,89,86,89,78,88,50,88
+16522,Fabinho,Fabinho,Brazil,CDM,89,78,75,84,85,88,86
+16523,Kingsley Coman,Coman,France,LM,89,94,82,82,89,34,70
+16566,Kalidou Koulibaly,Koulibaly,Senegal,CB,89,83,35,66,72,90,87
+16826,Christopher Nkunku,Nkunku,France,CF,89,91,84,86,91,69,70
+16163,Marquinhos,Marquinhos,Brazil,CB,89,80,57,76,76,90,82
+16266,João Cancelo,Cancelo,Portugal,LB,89,86,75,86,86,82,75
+1285,Neymar Jr,Neymar,Brazil,LW,89,87,83,85,93,37,61
+418,Heung Min Son,Son,Korea Republic,LW,89,88,89,82,86,42,69
+419,Harry Kane,Kane,England,ST,89,68,91,83,82,47,82
+195,Alisson,Alisson,Brazil,GK,89,86,85,85,90,89,47
+225,Ederson,Ederson,Brazil,GK,89,87,82,93,88,88,55
+250,Casemiro,Casemiro,Brazil,CDM,89,63,73,75,72,87,90
+16938,Bukayo Saka,Saka,England,RM,88,91,83,83,88,68,75
+16897,Richarlison,Richarlison,Brazil,ST,88,89,87,80,88,61,86
+16900,Alves da Silva,Dani Alves,Brazil,RB,88,90,78,89,86,85,82
+16901,Marcus Rashford,Rashford,England,LW,88,92,87,82,86,50,81
+16562,Frenkie de Jong,de Jong,Netherlands,CM,88,84,70,88,88,78,82
+16564,Vinícius Júnior,Vinícius,Brazil,LW,88,96,83,77,91,30,70
+16824,Marcelo Brozovic,Brozovic,Croatia,CDM,88,75,80,85,85,86,81
+16825,Alejandro Gómez,Gómez,Argentina,CAM,88,90,82,87,90,43,59
+16885,Sergio Busquets,Sergio Busquets,Spain,CDM,88,77,80,86,87,88,83
+16244,Phil Foden,Foden,England,LW,88,85,81,85,91,60,63
+16525,Mason Mount,Mount,England,CAM,88,85,87,89,86,60,77
+1286,Marquinhos,Marquinhos,Brazil,CB,88,79,56,75,74,89,80
+227,Bernardo Silva,Silva,Portugal,CAM,88,77,78,84,92,61,68
+228,Rúben Dias,Rúben Dias,Portugal,CB,88,63,39,66,68,88,88
+229,João Cancelo,Cancelo,Portugal,LB,88,85,73,85,85,81,73
+16919,Olivier Giroud,Giroud,France,ST,87,85,88,78,85,46,87
+16937,Achraf Hakimi,Hakimi,Morocco,RB,87,94,78,82,83,80,82
+16953,Gonçalo Matias Ramos,Gonçalo Ramos,Portugal,ST,87,88,87,76,85,50,87
+16960,Rodrygo,Rodrygo,Brazil,RW,87,94,83,80,90,35,63
+16772,André Silva,André Silva,Portugal,ST,87,84,87,77,86,52,83
+16773,Leandro Paredes,Paredes,Argentina,CDM,87,75,79,87,84,82,85
+16557,Steven Berghuis,Berghuis,Netherlands,CAM,87,85,86,87,87,44,75
+16820,Kyle Walker,Walker,England,RB,87,93,65,80,80,82,84
+16822,Christian Pulisic,Pulisic,United States,LW,87,92,80,81,91,42,64
+16851,Ben White,White,England,CB,87,80,37,75,80,88,84
+16869,Lionel Messi,Messi,Argentina,RW,87,90,81,86,91,35,63
+16403,Lautaro Martínez,Martínez,Argentina,ST,87,84,85,74,86,49,85
+16437,Fred,Fred,Brazil,LM,87,88,80,84,88,65,78
+16484,Cody Gakpo,Gakpo,Netherlands,LW,87,90,86,83,88,45,80
+16490,Anssumane Fati,Ansu Fati,Spain,ST,87,92,85,81,87,36,63
+16521,Rafael Leão,Rafael Leão,Portugal,LW,87,93,81,78,89,30,79
+16526,Nathan Aké,Aké,Netherlands,CB,87,81,58,77,78,86,85
+16529,Danilo Pereira,Danilo Pereira,Portugal,CDM,87,80,73,83,84,87,88
+16533,Andrej Kramaric,Kramaric,Croatia,CF,87,85,86,83,87,39,82
+16549,Antoine Griezmann,Griezmann,France,ST,87,85,87,87,90,56,80
+16551,Arkadiusz Milik,Milik,Poland,ST,87,87,87,75,83,41,80
+16553,Jack Grealish,Grealish,England,LW,87,85,80,86,90,47,73
+16165,Wojciech Szczesny,Szczesny,Poland,GK,87,87,83,74,87,88,0
+16335,Kalvin Phillips,Phillips,England,CDM,87,75,73,84,83,88,80
+111,Kalidou Koulibaly,Koulibaly,Senegal,CB,87,82,33,59,68,88,85
+2708,Frenkie de Jong,de Jong,Netherlands,CM,87,82,69,86,87,77,78
+420,Hugo Lloris,Lloris,France,GK,87,88,83,74,84,88,47
+198,Fabinho,Fabinho,Brazil,CDM,87,66,69,78,77,86,83
+230,Rodrigo,Rodri,Spain,CDM,87,58,72,78,79,83,84
+16922,Memphis Depay,Depay,Netherlands,CF,86,86,85,85,87,31,80
+16923,Marcos Acuña,Acuña,Argentina,LB,86,83,78,84,88,81,84
+16924,Marcus Thuram,Thuram,France,ST,86,90,87,80,86,56,85
+16926,Luke Shaw,Shaw,England,LB,86,86,60,85,84,86,85
+16934,Jules Koundé,Koundé,France,CB,86,86,46,71,76,87,82
+16935,Takefusa Kubo,Kubo,Japan,CAM,86,91,77,82,92,50,65
+16955,Daichi Kamada,Kamada,Japan,CAM,86,83,81,86,89,53,68
+16958,Amine Harit,Harit,Morocco,CAM,86,86,80,85,88,50,59
+16959,Lisandro Martínez,Martínez,Argentina,LB,86,80,65,82,82,87,88
+16962,Enzo Fernández,Fernández,Argentina,CM,86,83,80,85,86,81,87
+16964,Youssouf Fofana,Fofana,France,CDM,86,79,76,82,84,84,86
+16968,Nayef Aguerd,Aguerd,Morocco,CB,86,82,57,71,72,87,85
+16909,Brenden Aaronson,Aaronson,United States,CAM,86,93,80,82,90,65,75
+16912,Steven Bergwijn,Bergwijn,Netherlands,ST,86,92,85,82,89,48,78
+16916,Hakim Ziyech,Ziyech,Morocco,CAM,86,84,83,89,85,53,68
+16817,Cristian Romero,Romero,Argentina,CB,86,77,49,60,69,88,85
+16818,Junya Ito,Ito,Japan,RW,86,95,79,80,85,66,77
+16836,Sofiane Boufal,Boufal,Morocco,CF,86,88,80,85,93,39,66
+16848,Matheus Nunes,Matheus Nunes,Portugal,CM,86,86,77,81,89,82,83
+16895,Adrien Rabiot,Rabiot,France,CM,86,83,80,83,87,82,85
+16453,Stefan de Vrij,de Vrij,Netherlands,CB,86,70,43,68,71,89,82
+16497,Kieran Trippier,Trippier,England,RB,86,73,66,84,80,82,75
+16782,Denis Zakaria,Zakaria,Switzerland,CDM,86,85,70,80,81,85,88
+16539,Xherdan Shaqiri,Shaqiri,Switzerland,CAM,86,80,82,84,86,50,74
+16384,Luuk de Jong,de Jong,Netherlands,ST,86,86,87,81,83,50,75
+16404,Matthijs de Ligt,de Ligt,Netherlands,CB,86,76,60,63,70,86,88
+16405,Jude Bellingham,Bellingham,England,CM,86,77,78,81,86,80,82
+15929,Paulo Dybala,Dybala,Argentina,CF,86,80,85,85,90,40,59
+16194,Paulo Dybala,Dybala,Argentina,CF,86,80,85,85,90,40,59
+16209,Cody Gakpo,Gakpo,Netherlands,LW,86,89,85,82,87,44,79
+16213,Rafael Leão,Rafael Leão,Portugal,LW,86,92,80,76,88,29,77
+16234,Raheem Sterling,Sterling,England,LW,86,90,80,78,86,45,67
+16242,Raphinha,Raphinha,Brazil,RW,86,94,82,81,88,53,77
+16255,Bremer,Bremer,Brazil,CB,86,81,53,60,69,87,83
+16267,Mason Mount,Mount,England,CAM,86,77,84,87,84,57,70
+13429,Christopher Nkunku,Nkunku,France,CF,86,88,81,83,88,65,66
+2741,Vinícius Júnior,Vinícius,Brazil,LW,86,95,79,74,90,29,67
+839,Lautaro Martínez,Martínez,Argentina,ST,86,83,83,72,85,48,84
+842,Marcelo Brozovic,Brozovic,Croatia,CDM,86,69,74,81,81,81,78
+863,Wojciech Szczesny,Szczesny,Poland,GK,86,86,81,73,86,87,55
+112,Édouard Mendy,Mendy,Senegal,GK,86,84,82,81,85,88,42
+113,Thiago Silva,Silva,Brazil,CB,86,49,54,73,72,87,76
+114,Raheem Sterling,Sterling,England,LW,86,90,80,78,86,45,67
+478,Kingsley Coman,Coman,France,LM,86,92,77,79,87,30,62
+232,Aymeric Laporte,Laporte,Spain,CB,86,61,50,72,69,86,79
+252,Bruno Fernandes,Bruno Fernandes,Portugal,CAM,86,72,86,88,81,67,76
+16956,Ao Tanaka,Tanaka,Japan,CDM,85,81,78,82,84,82,83
+16957,Jawad El Yamiq,El Yamiq,Morocco,CB,85,88,57,60,69,81,87
+16830,Abdou Diallo,Diallo,Senegal,CB,85,78,47,78,80,85,84
+16832,Davy Klaassen,Klaassen,Netherlands,CAM,85,77,85,79,83,81,85
+16878,William Carvalho,William Carvalho,Portugal,CDM,85,76,73,82,80,82,89
+16882,Gonzalo Montiel,Montiel,Argentina,RB,85,90,66,76,81,81,86
+16883,Piotr Zielinski,Zielinski,Poland,CAM,85,83,80,83,88,73,64
+16887,Mateo Kovacic,Kovacic,Croatia,CM,85,78,77,84,89,76,76
+16890,Walker Zimmerman,Zimmerman,United States,CB,85,79,60,65,68,84,88
+16893,Lovro Majer,Majer,Croatia,CM,85,82,84,86,88,70,72
+16500,Bremer,Bremer,Brazil,CB,85,80,52,59,68,86,82
+16784,Borna Sosa,Sosa,Croatia,LB,85,88,60,85,85,81,80
+16541,Munir,Munir,Morocco,LW,85,90,84,83,86,39,76
+16543,Bartosz Bereszynski,Bereszynski,Poland,RB,85,90,65,76,80,80,83
+16545,Takuma Asano,Asano,Japan,RW,85,91,82,81,84,37,76
+16406,Antoine Griezmann,Griezmann,France,ST,85,83,84,85,87,54,75
+16433,Denzel Dumfries,Dumfries,Netherlands,CB,85,84,68,76,76,81,91
+16455,Gregor Kobel,Kobel,Switzerland,GK,85,86,83,76,82,90,0
+16346,Alex Telles,Alex Telles,Brazil,LB,85,88,80,86,82,82,78
+16202,Thiago Silva,Silva,Brazil,CB,85,77,62,74,76,86,84
+16206,Matthijs de Ligt,de Ligt,Netherlands,CB,85,75,59,61,69,84,87
+4344,Marcos Acuña,Acuña,Argentina,LB,85,76,74,83,87,80,83
+528,Yann Sommer,Sommer,Switzerland,GK,85,78,81,82,86,90,56
+2844,Cody Gakpo,Gakpo,Netherlands,LW,85,89,84,80,86,43,77
+2709,Sergio Busquets,Sergio Busquets,Spain,CDM,85,42,62,79,79,82,73
+2710,Memphis Depay,Depay,Netherlands,CF,85,83,84,82,86,30,79
+2711,Jordi Alba Ramos,Jordi Alba,Spain,LB,85,84,70,82,82,77,70
+479,Matthijs de Ligt,de Ligt,Netherlands,CB,85,75,59,61,69,84,87
+235,Kyle Walker,Walker,England,RB,85,91,63,77,78,80,82
+233,Phil Foden,Foden,England,LW,85,82,78,81,88,56,60
+16793,Gerónimo Rulli,Rulli,Argentina,GK,84,84,82,83,84,85,0
+16796,Otávio,Otávio,Portugal,RM,84,81,72,83,87,65,73
+16412,Steven Berghuis,Berghuis,Netherlands,CM,84,83,84,85,84,42,72
+16431,Noussair Mazraoui,Mazraoui,Morocco,RM,84,88,83,84,86,63,77
+16457,Nicolás Tagliafico,Tagliafico,Argentina,LWB,84,83,60,76,79,83,83
+16458,Diogo Dalot,Diogo Dalot,Portugal,RB,84,85,68,80,84,81,83
+16550,Krépin Diatta,Diatta,Senegal,RM,84,94,77,75,82,52,72
+16558,Ajdin Hrustic,Hrustic,Australia,CM,84,82,77,84,83,76,81
+16271,Gabriel Martinelli,Gabriel Martinelli,Brazil,LM,84,92,77,75,86,52,75
+16356,Marcus Thuram,Thuram,France,ST,84,86,84,78,84,54,82
+16376,DeAndre Yedlin,Yedlin,United States,RB,84,92,63,70,79,77,83
+16169,Olivier Giroud,Giroud,France,ST,84,45,85,75,76,44,81
+16172,Manuel Akanji,Akanji,Switzerland,CB,84,80,51,74,78,86,82
+16185,Marcus Rashford,Rashford,England,ST,84,88,84,79,83,46,77
+14651,Thiago Almada,Almada,Argentina,CAM,84,87,78,79,84,60,70
+4346,Alejandro Gómez,Gómez,Argentina,CAM,84,86,78,83,85,39,54
+1290,Achraf Hakimi,Hakimi,Morocco,RB,84,92,75,79,80,75,78
+2683,Marcos Llorente,Llorente,Spain,CM,84,88,79,81,82,78,81
+893,Rafael Leão,Rafael Leão,Portugal,LW,84,91,77,73,86,27,74
+2713,Jules Koundé,Koundé,France,CB,84,84,45,64,74,85,78
+304,Kieran Trippier,Trippier,England,RB,84,70,64,82,77,80,72
+844,Stefan de Vrij,de Vrij,Netherlands,CB,84,68,41,65,69,87,79
+236,Jack Grealish,Grealish,England,LW,84,76,76,83,87,46,69
+499,Jude Bellingham,Bellingham,England,CM,84,75,75,78,84,77,80
+118,Mason Mount,Mount,England,CAM,84,74,81,85,82,55,67
+119,Mateo Kovacic,Kovacic,Croatia,CM,84,70,69,83,88,71,71
+16413,Adrien Rabiot,Rabiot,France,CM,83,78,77,80,83,79,82
+16446,Djibril Sow,Sow,Switzerland,RB,83,84,70,80,82,80,81
+16797,Nuno Mendes,Nuno Mendes,Portugal,LB,83,92,60,77,81,78,77
+16798,Lovro Majer,Majer,Croatia,CM,83,73,77,84,86,64,71
+16193,Gabriel Jesus,Jesus,Brazil,ST,83,84,82,74,86,40,74
+16329,Przemyslaw Frankowski,Frankowski,Poland,LWB,83,89,76,78,80,82,81
+16359,William Carvalho,William Carvalho,Portugal,CDM,83,40,68,80,77,79,87
+4373,Pau Torres,Pau Torres,Spain,CB,83,73,38,67,70,84,81
+2845,Cody Gakpo,Gakpo,Netherlands,LW,83,87,82,77,84,41,74
+3914,Unai Simón,Unai Simón,Spain,GK,83,82,79,77,85,85,53
+7268,Daichi Kamada,Kamada,Japan,CAM,83,78,73,82,86,50,64
+2687,Antoine Griezmann,Griezmann,France,ST,83,80,82,83,85,52,72
+2689,Jorge Resurrección,Koke,Spain,CM,83,70,72,84,79,78,79
+2716,Raphinha,Raphinha,Brazil,RW,83,91,79,77,85,50,73
+2747,Marco Asensio,Asensio,Spain,RW,83,82,80,81,83,43,62
+4,Gabriel Jesus,Jesus,Brazil,ST,83,84,82,74,86,40,74
+1293,Carlos Soler,Carlos Soler,Spain,CM,83,80,77,83,80,71,72
+870,Bremer,Bremer,Brazil,CB,83,78,50,56,65,84,79
+121,Hakim Ziyech,Ziyech,Morocco,RW,83,76,77,87,83,50,65
+423,Cristian Romero,Romero,Argentina,CB,83,73,46,57,65,85,82
+203,Jordan Henderson,Henderson,England,CM,83,66,74,83,78,78,81
+1764,Rúben Neves,Rúben Neves,Portugal,CM,83,58,74,86,77,76,73
+237,John Stones,Stones,England,CB,83,72,51,71,75,84,77
+500,Gregor Kobel,Kobel,Switzerland,GK,83,84,80,74,79,88,50
+3,William Saliba,Saliba,France,CB,83,80,43,71,75,84,82
+16395,Cristian Roldan,Roldan,United States,RM,82,83,83,78,79,67,83
+16463,Callum Wilson,Wilson,England,ST,82,84,82,70,81,45,79
+16175,Diogo Dalot,Diogo Dalot,Portugal,RB,82,83,65,78,82,78,81
+16192,Antony,Antony,Brazil,RW,82,93,74,75,86,39,69
+16277,Enzo Fernández,Fernández,Argentina,CM,82,79,76,81,82,77,84
+16280,Franco Armani,Armani,Argentina,GK,82,82,78,73,84,88,0
+4374,Gerónimo Rulli,Rulli,Argentina,GK,82,82,79,80,81,83,51
+15931,Rui Patrício,Rui Patrício,Portugal,GK,82,82,80,77,80,83,59
+13433,André Silva,André Silva,Portugal,ST,82,74,83,70,82,47,78
+13434,Dani Olmo,Dani Olmo,Spain,CAM,82,67,76,81,86,50,60
+2620,Otávio,Otávio,Portugal,RM,82,78,69,80,85,63,71
+2794,Steven Berghuis,Berghuis,Netherlands,CAM,82,80,82,83,82,40,69
+851,Denzel Dumfries,Dumfries,Netherlands,RWB,82,83,63,70,73,78,89
+899,Olivier Giroud,Giroud,France,ST,82,42,83,72,73,42,78
+256,Antony,Antony,Brazil,RW,82,93,74,75,86,39,69
+5,Bukayo Saka,Saka,England,RM,82,84,74,78,83,65,65
+6,Aaron Ramsdale,Ramsdale,England,GK,82,83,77,85,78,84,48
+122,Christian Pulisic,Pulisic,United States,LW,82,87,71,73,86,37,59
+135,Jordan Pickford,Pickford,England,GK,82,84,77,87,80,87,59
+484,Noussair Mazraoui,Mazraoui,Morocco,RB,82,84,66,77,82,76,74
+16177,Remko Pasveer,Pasveer,Netherlands,GK,81,80,83,88,82,83,0
+16200,Richarlison,Richarlison,Brazil,ST,81,82,79,72,82,53,79
+3943,Guido Rodríguez,Rodríguez,Argentina,CDM,81,51,57,71,68,84,77
+7840,Ricardo Horta,Ricardo Horta,Portugal,CF,81,79,82,79,80,43,70
+2596,Nicolás Otamendi,Otamendi,Argentina,CB,81,63,57,62,59,83,81
+2623,Pepe,Pepe,Portugal,CB,81,77,51,60,61,81,87
+2750,Rodrygo,Rodrygo,Brazil,RW,81,88,76,74,84,32,56
+1295,Pablo Sarabia,Pablo Sarabia,Spain,RW,81,73,76,82,82,57,59
+1125,Nicolás Tagliafico,Tagliafico,Argentina,LB,81,80,56,72,75,80,80
+485,Dayot Upamecano,Upamecano,France,CB,81,82,43,61,68,80,81
+1767,José Sá,José Sá,Portugal,GK,81,83,78,73,79,83,53
+257,Harry Maguire,Maguire,England,CB,81,48,57,68,67,80,84
+258,Marcus Rashford,Rashford,England,LW,81,87,82,75,81,41,71
+259,Lisandro Martínez,Martínez,Argentina,CB,81,72,60,76,77,82,83
+305,Nick Pope,Pope,England,GK,81,80,82,75,80,83,55
+125,Denis Zakaria,Zakaria,Switzerland,CDM,81,82,64,73,77,80,85
+425,Richarlison,Richarlison,Brazil,ST,81,82,79,72,82,53,79
+238,Manuel Akanji,Akanji,Switzerland,CB,81,77,48,70,74,83,78
+239,Kalvin Phillips,Phillips,England,CDM,81,66,65,77,76,79,82
+16205,Steven Bergwijn,Bergwijn,Netherlands,LW,80,86,78,75,83,42,70
+16061,Teun Koopmeiners,Koopmeiners,Netherlands,CM,80,70,72,80,76,76,77
+16062,Marten de Roon,de Roon,Netherlands,CDM,80,70,68,70,71,82,83
+4353,Alex Telles,Alex Telles,Brazil,LB,80,79,74,81,77,75,71
+7271,Djibril Sow,Sow,Switzerland,CM,80,77,69,77,78,77,79
+7272,Daichi Kamada,Kamada,Japan,CAM,80,74,68,79,83,46,61
+3946,William Carvalho,William Carvalho,Portugal,CDM,80,35,65,77,73,75,84
+2797,Steven Bergwijn,Bergwijn,Netherlands,LW,80,86,78,75,83,42,70
+2799,Daley Blind,Blind,Netherlands,CB,80,42,62,82,79,81,70
+1296,Nuno Mendes,Nuno Mendes,Portugal,LB,80,89,57,73,78,74,73
+1298,Danilo Pereira,Danilo Pereira,Portugal,CDM,80,56,63,70,71,79,85
+1311,Lovro Majer,Majer,Croatia,CM,80,69,73,81,83,60,67
+873,Alex Sandro,Alex Sandro,Brazil,LB,80,76,65,73,78,76,78
+874,Adrien Rabiot,Rabiot,France,CM,80,75,73,76,79,76,79
+875,Danilo,Danilo,Brazil,RB,80,72,67,73,74,81,79
+876,Leandro Paredes,Paredes,Argentina,CDM,80,64,71,82,78,76,78
+877,Weston McKennie,McKennie,United States,CM,80,82,74,76,80,78,83
+260,Fred,Fred,Brazil,CM,80,76,67,79,81,75,71
+264,Luke Shaw,Shaw,England,LB,80,76,54,78,78,79,78
+332,Remo Freuler,Freuler,Switzerland,CM,80,68,71,75,78,75,74
+428,Eric Dier,Dier,England,CB,80,54,64,70,65,80,84
+452,Nayef Aguerd,Aguerd,Morocco,CB,80,73,50,64,65,80,77
+9,William Saliba,Saliba,France,CB,80,78,39,67,71,80,79
+16663,Alexis Mac Allister,Mac Allister,Argentina,CAM,79,72,80,81,78,58,64
+16668,Szymon Zurkowski,Zurkowski,Poland,CM,79,85,75,76,80,73,83
+16040,Pedro,Pedro,Spain,LW,79,73,74,76,86,36,51
+10358,Boulaye Dia,Dia,Senegal,ST,79,83,78,62,76,27,76
+7555,Munir,Munir,Morocco,LW,79,77,78,75,82,35,64
+7653,Franco Armani,Armani,Argentina,GK,79,78,74,69,80,85,0
+4360,Gonzalo Montiel,Montiel,Argentina,RB,79,83,60,70,75,75,81
+4384,Juan Foyth,Foyth,Argentina,RB,79,72,46,69,72,80,77
+2819,Justin Bijlow,Bijlow,Netherlands,GK,79,82,75,78,76,80,47
+2848,Luuk de Jong,de Jong,Netherlands,ST,79,48,78,71,70,46,77
+3540,Wout Weghorst,Weghorst,Netherlands,ST,79,60,77,60,69,52,86
+2624,Diogo Costa,Diogo Costa,Portugal,GK,79,76,75,73,78,83,40
+2425,Jordan Veretout,Veretout,France,CDM,79,76,75,76,78,76,79
+2722,Anssumane Fati,Ansu Fati,Spain,LW,79,88,77,72,82,30,53
+2800,Davy Klaassen,Klaassen,Netherlands,CAM,79,68,80,74,76,73,78
+1299,Vitinha,Vitinha,Portugal,CM,79,73,68,79,83,67,55
+1314,Steve Mandanda,Mandanda,France,GK,79,77,79,74,77,81,49
+1177,Youssouf Fofana,Fofana,France,CDM,79,68,67,74,76,75,77
+1202,Jonas Omlin,Omlin,Switzerland,GK,79,80,75,73,76,82,51
+1771,Matheus Nunes,Matheus Nunes,Portugal,CM,79,82,71,73,82,74,76
+878,Arkadiusz Milik,Milik,Poland,ST,79,61,82,69,74,39,69
+489,Benjamin Pavard,Pavard,France,RB,79,66,55,72,71,81,78
+268,Tyrell Malacia,Malacia,Netherlands,LB,79,85,56,66,77,76,76
+37,Matty Cash,Cash,Poland,RB,79,80,67,71,75,74,76
+310,Callum Wilson,Wilson,England,ST,79,81,78,66,77,42,76
+129,Conor Gallagher,Gallagher,England,CM,79,74,76,75,78,67,74
+12,Ben White,White,England,CB,79,70,29,67,72,81,76
+13,Granit Xhaka,Xhaka,Switzerland,CDM,79,49,64,79,69,69,80
+14,Takehiro Tomiyasu,Tomiyasu,Japan,RB,79,74,33,67,71,80,79
+16590,Nicola Zalewski,Zalewski,Poland,LM,78,87,63,74,80,58,58
+16591,Karol Swiderski,Swiderski,Poland,ST,78,72,78,65,75,35,75
+16598,Bartosz Bereszynski,Bereszynski,Poland,RB,78,89,60,68,74,72,78
+16599,Robert Gumny,Gumny,Poland,RWB,78,80,46,65,74,73,75
+16576,Sebastian Szymanski,Szymanski,Poland,CAM,78,87,70,78,80,41,52
+16578,Krystian Bielik,Bielik,Poland,CDM,78,64,50,69,73,76,79
+16582,Kamil Glik,Glik,Poland,CB,78,41,37,49,58,77,85
+16583,Jakub Kaminski,Kaminski,Poland,LM,78,92,71,68,78,52,62
+16584,Kamil Grosicki,Grosicki,Poland,LM,78,91,73,74,78,41,62
+16585,Damian Szymanski,Szymanski,Poland,CM,78,75,72,72,74,74,84
+12619,Grzegorz Krychowiak,Krychowiak,Poland,CDM,78,50,75,72,68,75,78
+5594,Mathew Ryan,Ryan,Australia,GK,78,78,76,82,76,80,53
+2604,Enzo Fernández,Fernández,Argentina,CM,78,74,71,76,78,72,80
+3659,Junya Ito,Ito,Japan,RW,78,89,71,73,78,58,70
+2429,Pape Gueye,Gueye,France,CDM,78,63,48,66,70,73,79
+2700,Nahuel Molina,Molina,Argentina,RWB,78,82,67,71,76,71,69
+2543,Noa Lang,Lang,Netherlands,LW,78,86,73,72,83,50,67
+785,Wataru Endo,Endo,Japan,CM,78,67,64,70,78,78,75
+786,Borna Sosa,Sosa,Croatia,LB,78,79,53,77,78,72,70
+714,Exequiel Palacios,Palacios,Argentina,CDM,78,66,73,76,78,74,72
+269,Diogo Dalot,Diogo Dalot,Portugal,RB,78,79,60,73,78,73,77
+535,Marcus Thuram,Thuram,France,ST,78,81,77,71,78,48,76
+242,Nathan Aké,Aké,Netherlands,CB,78,76,53,70,70,79,75
+15,Gabriel Martinelli,Gabriel Martinelli,Brazil,LM,78,87,71,68,80,45,68
+16767,Bailey Wright,Wright,Australia,CB,77,60,45,58,60,75,83
+16743,Daniel Schmidt,Schmidt,Japan,GK,77,78,73,76,72,80,0
+16751,Nathaniel Atkinson,Atkinson,Australia,RWB,77,86,60,68,78,68,82
+16571,Mateusz Wieteska,Wieteska,Poland,CB,77,69,40,53,57,75,82
+13447,Abdou Diallo,Diallo,Senegal,CB,77,72,39,71,74,77,76
+6787,Ismaïla Sarr,Sarr,Senegal,RM,77,94,76,67,80,22,67
+6304,Sofiane Boufal,Boufal,Morocco,CF,77,79,71,75,84,30,56
+3953,Germán Pezzella,Pezzella,Argentina,CB,77,50,49,49,56,79,71
+2979,Marko Livaja,Livaja,Croatia,CF,77,78,77,71,79,38,81
+1958,Danilo,Danilo,Brazil,LB,77,68,59,67,77,76,70
+2045,Silvan Widmer,Widmer,Switzerland,RWB,77,78,62,72,74,72,79
+1316,Alfred Gomis,Gomis,Senegal,GK,77,77,76,71,76,76,48
+1184,Axel Disasi,Disasi,France,CB,77,50,28,51,55,77,82
+537,Nico Elvedi,Elvedi,Switzerland,CB,77,70,39,64,68,78,78
+564,Ritsu Doan,Doan,Japan,RM,77,79,71,73,81,40,59
+1182,Breel Embolo,Embolo,Switzerland,ST,77,84,75,70,74,51,82
+18,Matt Turner,Turner,United States,GK,77,76,75,67,79,77,44
+16187,Tyler Adams,Adams,United States,CDM,76,80,48,69,73,73,76
+16473,Jason Cummings,Cummings,Australia,ST,76,80,76,64,74,45,75
+14655,Thiago Almada,Almada,Argentina,CAM,76,85,72,71,82,52,62
+15598,Walker Zimmerman,Zimmerman,United States,CB,76,57,50,55,56,74,84
+10397,Sofyan Amrabat,Amrabat,Morocco,CDM,76,68,71,70,75,73,78
+9113,Renato Steffen,Steffen,Switzerland,LM,76,85,71,71,79,54,66
+8190,David Raya Martin,David Raya,Spain,GK,76,76,74,80,75,77,42
+7122,Alexis Mac Allister,Mac Allister,Argentina,CAM,76,69,77,78,75,56,62
+5215,Xherdan Shaqiri,Shaqiri,Switzerland,CAM,76,69,75,79,79,45,62
+5818,Christian Fassnacht,Fassnacht,Switzerland,RM,76,82,70,70,75,37,72
+4293,Ante Budimir,Budimir,Croatia,ST,76,62,76,49,72,35,76
+3956,Youssouf Sabaly,Sabaly,Senegal,RB,76,77,46,64,71,73,70
+3155,Domagoj Vida,Vida,Croatia,CB,76,74,40,58,59,78,81
+2661,Hidemasa Morita,Morita,Japan,CM,76,67,64,74,75,72,73
+2726,Eric García Martret,Eric García,Spain,CB,76,62,44,71,68,77,71
+3500,Haris Seferovic,Seferovic,Switzerland,ST,76,71,76,67,71,47,83
+1380,Aaron Mooy,Mooy,Australia,CM,76,62,72,78,74,69,75
+45,Jan Bednarek,Bednarek,Poland,CB,76,48,22,53,55,77,78
+172,Tyler Adams,Adams,United States,CDM,76,80,48,69,73,73,76
+16672,Garang Kuol,Kuol,Australia,LM,75,92,70,65,73,38,56
+12334,Craig Goodwin,Goodwin,Australia,LM,75,84,70,69,74,58,75
+12178,Cristian Roldan,Roldan,United States,RM,75,74,69,72,75,70,81
+10362,Krzysztof Piatek,Piatek,Poland,ST,75,72,76,54,72,36,71
+9424,Ruben Vargas,Vargas,Switzerland,LM,75,89,69,67,79,54,64
+4170,Jawad El Yamiq,El Yamiq,Morocco,CB,75,86,48,52,62,74,80
+2609,Gonçalo Matias Ramos,Gonçalo Ramos,Portugal,ST,75,77,73,64,74,40,80
+2805,Remko Pasveer,Pasveer,Netherlands,GK,75,73,76,82,75,76,50
+2434,Amine Harit,Harit,Morocco,LM,75,74,62,71,79,39,49
+2197,Noah Okafor,Okafor,Switzerland,ST,75,93,73,68,75,31,75
+2159,Michel Aebischer,Aebischer,Switzerland,CM,75,71,65,75,75,65,74
+1189,Takumi Minamino,Minamino,Japan,CF,75,78,74,70,81,38,62
+542,Ko Itakura,Itakura,Japan,CB,75,74,45,59,67,77,76
+16889,Kaoru Mitoma,Mitoma,Japan,LM,74,87,79,76,84,66,72
+15947,Nicola Zalewski,Zalewski,Poland,LM,74,83,59,70,76,55,55
+16349,Xavi Simons,Simons,Netherlands,RW,74,85,72,77,84,63,69
+7128,Kaoru Mitoma,Mitoma,Japan,LM,74,82,69,68,77,56,62
+5273,Jesus Ferreira,Ferreira,United States,CF,74,81,73,70,74,44,65
+4100,Takefusa Kubo,Kubo,Japan,RM,74,79,65,69,80,39,53
+3930,Nico Williams,Nico Williams,Spain,RM,74,91,67,65,77,33,58
+2827,Sebastian Szymanski,Szymanski,Poland,CAM,74,83,66,74,76,38,49
+1897,Antonee Robinson,Robinson,United States,LB,74,87,47,62,73,68,72
+1683,Nampalys Mendy,Mendy,Senegal,CDM,74,60,54,69,75,73,66
+1193,Krépin Diatta,Diatta,Senegal,RM,74,91,69,66,76,47,67
+182,Brenden Aaronson,Aaronson,United States,CAM,74,81,66,68,78,53,63
+13731,Munir Mohand Mohamedi,Munir,Morocco,GK,73,73,72,68,73,75,53
+14585,Sean Johnson,Johnson,United States,GK,73,73,67,70,70,76,52
+11083,Kamil Grosicki,Grosicki,Poland,LM,73,86,68,69,73,37,58
+7853,Vítor Manuel Carvalho Oliveira,Vitinha,Portugal,ST,73,75,72,61,71,28,80
+5167,Aaron Long,Long,United States,CB,73,78,39,54,62,70,82
+4334,Pathé Ciss,Ciss,Senegal,CDM,73,63,56,61,62,71,82
+4150,Yunus Musah,Musah,United States,RM,73,85,69,66,75,59,67
+3960,Rodri,Rodri,Spain,RM,73,71,71,69,76,38,48
+2567,Selim Amallah,Amallah,Morocco,CAM,73,68,75,72,74,63,75
+2864,Xavi Simons,Simons,Netherlands,CAM,73,77,63,71,77,55,63
+2809,Kenneth Taylor,Taylor,Netherlands,CM,73,76,69,76,74,61,66
+1967,Takuma Asano,Asano,Japan,RW,73,88,67,61,77,30,67
+764,Maya Yoshida,Yoshida,Japan,CB,73,52,41,51,63,74,70
+23,Marcus Vincius Oliveira Alencar,Marquinhos,Brazil,RM,73,81,62,66,75,33,54
+14838,Kellyn Acosta,Acosta,United States,CM,72,76,67,72,72,66,77
+12182,Jordan Morris,Morris,United States,LM,72,84,68,67,71,38,80
+7063,Harry Souttar,Souttar,Australia,CB,72,39,28,50,58,73,76
+2525,Vincent Janssen,Janssen,Netherlands,ST,72,75,70,60,68,39,82
+1350,Eiji Kawashima,Kawashima,Japan,GK,72,72,71,72,71,71,43
+1392,Daizen Maeda,Maeda,Japan,LW,72,91,73,61,70,45,69
+794,Hiroki Ito,Ito,Japan,CB,72,84,54,65,65,73,71
+367,Seny Dieng,Dieng,Senegal,GK,72,70,68,71,69,75,44
+15462,Jakub Kiwior,Kiwior,Poland,CDM,71,65,37,58,63,70,75
+13206,Kamil Glik,Glik,Poland,CB,71,35,32,44,52,71,79
+13532,Mathew Leckie,Leckie,Australia,LM,71,82,65,64,72,53,75
+10910,Ao Tanaka,Tanaka,Japan,CDM,71,67,66,68,70,68,69
+9433,Robert Gumny,Gumny,Poland,RWB,71,74,41,60,68,67,69
+8982,Chul Hong,Hong Chul,Korea Republic,LWB,71,85,49,65,69,63,73
+8160,Ethan Horvath,Horvath,United States,GK,71,78,66,57,62,76,46
+7740,André Oliveira Silva,André Silva,Brazil,ST,71,76,70,65,72,32,66
+5740,Fabian Frei,Frei,Switzerland,CB,71,55,69,70,69,72,73
+3988,Luca de la Torre,de la Torre,United States,CM,71,65,56,70,74,59,61
+2834,Danilo Pereira Da Silva,Danilo,Brazil,ST,71,77,72,58,73,22,64
+2061,Edimilson Fernandes,Fernandes,Switzerland,CM,71,67,65,67,72,70,66
+1431,Martin Boyle,Boyle,Australia,CF,71,92,70,61,73,46,66
+1535,Krystian Bielik,Bielik,Poland,CDM,71,59,45,63,67,70,73
+548,Joe Scally,Scally,United States,RB,71,76,43,61,70,67,69
+368,Ilias Chair,Chair,Morocco,CAM,71,75,66,68,73,31,48
+441,Pape Matar Sarr,Sarr,Senegal,CM,71,67,63,68,72,66,65
+288,Riley McGree,McGree,Australia,CM,71,79,69,69,74,63,73
+12376,Danny Vukovic,Vukovic,Australia,GK,70,69,68,63,70,71,53
+10333,Jackson Irvine,Irvine,Australia,CM,70,65,67,68,67,67,76
+8840,Awer Mabil,Mabil,Australia,LW,70,87,64,63,71,34,59
+7148,Zakaria Aboukhlal,Aboukhlal,Morocco,RW,70,86,67,62,73,29,62
+6517,Ayase Ueda,Ueda,Japan,ST,70,82,71,52,64,27,68
+6318,Azzedine Ounahi,Ounahi,Morocco,CM,70,57,61,68,70,61,66
+4394,Nicolas Jackson,Jackson,Senegal,ST,70,74,70,56,70,40,67
+2128,Aziz Behich,Behich,Australia,LB,70,77,63,64,71,66,67
+1903,Tim Ream,Ream,United States,CB,70,54,43,67,68,71,68
+1409,Cameron Devlin,Devlin,Australia,CM,70,70,55,65,71,68,74
+14686,DeAndre Yedlin,Yedlin,United States,RB,69,90,51,56,65,64,70
+9659,Gaku Shibasaki,Shibasaki,Japan,CDM,69,69,61,68,71,66,66
+8054,Andries Noppert,Noppert,Netherlands,GK,69,68,66,65,69,68,48
+7641,José Marcos Costa Martins,Marquinhos,Brazil,CAM,69,84,67,62,74,27,68
+5042,Daniel Schmidt,Schmidt,Japan,GK,69,71,66,70,65,73,42
+3653,Achraf Dari,Dari,Morocco,CB,69,62,31,49,51,71,69
+2182,Fran Karacic,Karacic,Australia,RB,69,81,46,62,66,62,74
+9603,Keanu Baccus,Baccus,Australia,CM,68,76,53,62,69,68,71
+7215,Mateusz Wieteska,Wieteska,Poland,CB,68,61,33,46,49,67,74
+6722,Josh Sargent,Sargent,United States,RM,68,73,68,62,67,46,81
+5515,Haji Wright,Wright,United States,ST,68,77,68,53,65,22,74
+1720,Bailey Wright,Wright,Australia,CB,68,52,38,51,52,67,75
+1414,Nathaniel Atkinson,Atkinson,Australia,RWB,68,78,53,61,70,60,74
+9373,Marcos Vinícius Sousa Natividade,Marquinhos,Brazil,LW,67,85,57,59,71,25,51
+1418,Kye Rowles,Rowles,Australia,CB,67,66,24,45,44,68,74
+5837,Fabian Rieder,Rieder,Switzerland,CM,66,70,56,66,70,50,61
+12471,Andrew Redmayne,Redmayne,Australia,GK,65,64,64,63,65,65,41
+7232,Formose Mendy,Mendy,Senegal,CB,65,74,32,51,55,64,69
+3136,Joel King,King,Australia,LB,65,71,30,54,60,62,71
+5781,Ardon Jashari,Jashari,Switzerland,CM,63,63,58,61,66,58,64
+5055,Fábio Pereira Baptista,Fabinho,Portugal,RWB,62,71,34,54,63,59,51
+12389,Garang Kuol,Kuol,Australia,LM,59,83,56,51,59,25,43
