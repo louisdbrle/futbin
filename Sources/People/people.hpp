@@ -8,6 +8,7 @@ public:
     People(uint64_t _id, std::string name, std::string last_name, u_short age, std::string nationality);
     //~People();
 
+    uint64_t get_id() { return _id; }
     std::string get_name() { return _name; }
     std::string get_last_name() { return _last_name; }
     u_short get_age() { return _age; }

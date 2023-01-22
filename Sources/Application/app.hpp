@@ -21,10 +21,12 @@ public:
     void select_user(uint64_t user_id);
 
     // ---Draw cards function segment--- //
+    Player* get_player_by_id(uint64_t id);
     Player* get_rand_player();
     std::vector<Player*> draw_player_card();
     std::vector<Player*> draw_player_card(uint8_t nb_card);
 
+    Coach* get_coach_by_id(uint64_t id);
     Coach* get_rand_coach();
     std::vector<Coach*> draw_coach_card();
     std::vector<Coach*> draw_coach_card(uint8_t nb_card);
