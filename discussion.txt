@@ -1,0 +1,9 @@
+Virer les coachs
+Virer les Matchs
+Virer les Games
+
+
+Garder People et Players et  Goal et field 
+Garder Application
+Garder Team 
+Garder User
