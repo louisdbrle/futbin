@@ -1,0 +1,7 @@
+id,name,commonName,nation,position,rating,pace,shooting,passing,dribbling,defending,physicality
+1,Virgil van Dijk,van Dijk,Netherlands,CB,92,83,61,73,74,92,88
+2,Robert Lewandowski,Lewandowski,Poland,ST,92,77,92,81,87,45,84
+3,Lionel Messi,Messi,Argentina,RW,92,82,90,92,95,35,66
+4,Lionel Messi,Messi,Argentina,CAM,92,82,90,91,95,35,65
+5,Rafael Leão,Rafael Leão,Portugal,ST,91,96,85,81,91,34,83
+6,Heung Min Son,Son,Korea Republic,LW,91,90,91,86,89,44,75
