@@ -35,3 +35,27 @@ void User::print_user() {
     // vector_player = " << _vect_player << ", vector_histo = " <<
     // _vect_historic_game << std::endl;
 }
+
+void User::add_player(Player* player) { _players.push_back(player); }
+
+void User::remove_player(Player* player) {
+    std::vector<Player*>::iterator it = _players.begin();
+    for (auto i : _players) {
+        if (i == player) {
+            _players.erase(it);
+        }
+        it++;
+    }
+}
+
+void User::add_card(Card* card) { _cards.push_back(card); }
+
+void User::remove_card(Card* card) {
+    std::vector<Card*>::iterator it = _cards.begin();
+    for (auto i : _cards) {
+        if (i == card) {
+            _cards.erase(it);
+        }
+        it++;
+    }
+}

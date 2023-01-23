@@ -24,7 +24,7 @@ class Team {
     void add_to_team(Player* player);
     void remove_from_team(Player* player);
 
-    void add_card(Card* card);
+    void add_card(Card* card, int index);
     void remove_card(Card* card);
 
    private:

@@ -12,9 +12,11 @@ Application::Application() {
 
     _window =
         SDL_CreateWindow("FUT Game", SDL_WINDOWPOS_UNDEFINED,
-                         SDL_WINDOWPOS_UNDEFINED, 850, 850, SDL_WINDOW_SHOWN);
+                         SDL_WINDOWPOS_UNDEFINED, 810, 810, SDL_WINDOW_SHOWN);
 
     _renderer = SDL_CreateRenderer(_window, -1, 0);
+
+    _font = TTF_OpenFont("Roboto-Regular.ttf", 46);
 
     load_db_players();
     load_db_users();
@@ -211,6 +213,15 @@ Player* Application::get_player_by_id(uint64_t id) {
     return NULL;
 }
 
+Card* Application::get_card_by_id(uint64_t id) {
+    for (u_int32_t i = 0; i < db_cards.size(); i++) {
+        if (db_cards[i].get_id() == id) {
+            return &db_cards[i];
+        }
+    }
+    return NULL;
+}
+
 Player* Application::get_rand_player() {
     return &db_players.at(std::rand() % db_players.size());
 }
@@ -229,27 +240,334 @@ void Application::print_db_users() {
     std::cout << std::endl;
 }
 
-void Application::draw_cards_collection() {
-    for (std::vector<Card>::size_type i = 0;
-         i < current_user->get_vect_cards().size(); i++) {
-        current_user->get_vect_cards()[i]->draw(_renderer, 162 * i,
-                                                202 * (i % 3), 162, 202);
+void Application::draw_cards_collection(int page) {
+    for (std::vector<Card>::size_type i = page * 20;
+         i < page * 20 + 20 && i < current_user->get_vect_cards().size(); i++) {
+        draw_button(162 * ((i - page * 20) % 5), 202 * ((i - page * 20) / 5),
+                    162, 202, " ");
+        current_user->get_vect_cards()[i]->draw(
+            _renderer, 162 * ((i - page * 20) % 5), 202 * ((i - page * 20) / 5),
+            162, 202);
+    }
+}
+
+void Application::draw_team() {
+    int position[11][4]{
+        {243, 0, 162, 202},   {405, 0, 162, 202},   {81, 202, 162, 202},
+        {243, 202, 162, 202}, {405, 202, 162, 202}, {567, 202, 162, 202},
+        {81, 404, 162, 202},  {243, 404, 162, 202}, {405, 404, 162, 202},
+        {567, 404, 162, 202}, {324, 606, 162, 202}};
+
+    for (int i = 0; i < 11; i++) {
+        draw_button(position[i][0], position[i][1], position[i][2],
+                    position[i][3], " ");
+        current_user->get_team()->get_vect_card()[10 - i]->draw(
+            _renderer, position[i][0], position[i][1], position[i][2],
+            position[i][3]);
+    }
+}
+
+void Application::draw_button(int button_x, int button_y, int button_w,
+                              int button_h, std::string text) {
+    SDL_Rect rect;
+    rect.x = button_x;
+    rect.y = button_y;
+    rect.w = button_w;
+    rect.h = button_h;
+
+    SDL_SetRenderDrawColor(_renderer, 0, 0, 0, 255);
+    SDL_RenderFillRect(_renderer, &rect);
+
+    SDL_SetRenderDrawColor(_renderer, 255, 255, 255, 255);
+    SDL_RenderDrawRect(_renderer, &rect);
+
+    SDL_Color color = {255, 255, 255, 255};
+    SDL_Surface* surface = TTF_RenderText_Solid(_font, text.c_str(), color);
+    SDL_Texture* texture = SDL_CreateTextureFromSurface(_renderer, surface);
+
+    SDL_Rect rect_text;
+    rect_text.x = button_x + button_w / 2 - surface->w / 2;
+    rect_text.y = button_y + button_h / 2 - surface->h / 2;
+    rect_text.w = surface->w;
+    rect_text.h = surface->h;
+
+    SDL_RenderCopy(_renderer, texture, NULL, &rect_text);
+
+    SDL_FreeSurface(surface);
+    SDL_DestroyTexture(texture);
+}
+
+void Application::draw_blank_card() {
+    SDL_Surface* card = IMG_Load("Sources/Assets/rare-gold-23.png");
+    SDL_Texture* card_texture = SDL_CreateTextureFromSurface(_renderer, card);
+    SDL_Rect rect_card = {334, 304, 142, 202};
+    SDL_RenderCopy(_renderer, card_texture, NULL, &rect_card);
+    SDL_FreeSurface(card);
+    SDL_DestroyTexture(card_texture);
+}
+
+Card* Application::open_pack() {
+    Player* player = get_rand_player();
+    current_user->add_player(player);
+    Card* card = get_card_by_id(player->get_id());
+    current_user->add_card(card);
+    return card;
+}
+
+void Application::draw_pack_button() {
+    SDL_Surface* card = IMG_Load("Sources/Assets/rare-gold-23.png");
+    SDL_Texture* card_texture = SDL_CreateTextureFromSurface(_renderer, card);
+    SDL_Rect rect_card = {0, 0, 50, 70};
+    SDL_RenderCopy(_renderer, card_texture, NULL, &rect_card);
+    SDL_FreeSurface(card);
+    SDL_DestroyTexture(card_texture);
+}
+
+void Application::swap_card(int index_team, int index_collection) {
+    // erase card in team, add it to collection and vice versa
+    if (index_team < current_user->get_team()->get_vect_card().size() &&
+        index_collection < current_user->get_vect_cards().size()) {
+        Card* team_card =
+            new Card(*current_user->get_team()->get_vect_card()[index_team]);
+        Card* collection_card =
+            new Card(*current_user->get_vect_cards()[index_collection]);
+
+        current_user->remove_card(
+            current_user->get_vect_cards()[index_collection]);
+        current_user->get_team()->remove_card(
+            current_user->get_team()->get_vect_card()[index_team]);
+
+        current_user->add_card(team_card);
+        current_user->get_team()->add_card(collection_card, index_team);
     }
 }
 
 void Application::run() {
     bool quit = false;
+    int screen = 2;
+    int page = 0;
+    int index_team = 0;
+    int index_collection = 0;
+    int swap = 0;
+    Card* card = NULL;
     while (!quit) {
         while (SDL_PollEvent(&_event)) {
-            if (_event.type == SDL_QUIT) {
-                quit = true;
+            switch (_event.type) {
+                case SDL_QUIT:
+                    quit = true;
+                    break;
+                case SDL_KEYDOWN:
+                    switch (_event.key.keysym.sym) {
+                        case SDLK_LEFT:
+                            if (screen == 1) {
+                                if (page > 0) {
+                                    page--;
+                                }
+                            }
+                            break;
+                        case SDLK_RIGHT:
+                            if (screen == 1) {
+                                if (page < 23) {
+                                    page++;
+                                }
+                            }
+                            break;
+                        case SDLK_RETURN:
+                            if (screen == 3) {
+                                screen = 4;
+                                break;
+                            }
+                            if (screen == 5) {
+                                screen = 2;
+                                break;
+                            }
+                            break;
+                    }
+
+                case SDL_MOUSEBUTTONDOWN:
+                    if (_event.button.button == SDL_BUTTON_LEFT) {
+                        int x = _event.button.x;
+                        int y = _event.button.y;
+                        if (screen == 2) {
+                            if (x > 0 && x < 50 && y > 0 && y < 70) {
+                                screen = 3;
+                            } else if (x > 243 && x < 405 && y > 0 && y < 202) {
+                                index_team = 10;
+                                screen = 1;
+                            } else if (x > 405 && x < 567 && y > 0 && y < 202) {
+                                index_team = 9;
+                                screen = 1;
+                            } else if (x > 81 && x < 243 && y > 202 &&
+                                       y < 404) {
+                                index_team = 8;
+                                screen = 1;
+                            } else if (x > 243 && x < 405 && y > 202 &&
+                                       y < 404) {
+                                index_team = 7;
+                                screen = 1;
+                            } else if (x > 405 && x < 567 && y > 202 &&
+                                       y < 404) {
+                                index_team = 6;
+                                screen = 1;
+                            } else if (x > 567 && x < 729 && y > 202 &&
+                                       y < 404) {
+                                index_team = 5;
+                                screen = 1;
+                            } else if (x > 81 && x < 243 && y > 404 &&
+                                       y < 606) {
+                                index_team = 4;
+                                screen = 1;
+                            } else if (x > 243 && x < 405 && y > 404 &&
+                                       y < 606) {
+                                index_team = 3;
+                                screen = 1;
+                            } else if (x > 405 && x < 567 && y > 404 &&
+                                       y < 606) {
+                                index_team = 2;
+                                screen = 1;
+                            } else if (x > 567 && x < 729 && y > 404 &&
+                                       y < 606) {
+                                index_team = 1;
+                                screen = 1;
+                            } else if (x > 324 && x < 486 && y > 606 &&
+                                       y < 808) {
+                                index_team = 0;
+                                screen = 1;
+                            }
+                        } else if (screen == 1) {
+                            if (x > 0 && x < 162 && y > 0 && y < 202) {
+                                index_collection = 0 + 20 * page;
+                                screen = 2;
+                                swap = 1;
+                            } else if (x > 162 && x < 324 && y > 0 && y < 202) {
+                                index_collection = 1 + 20 * page;
+                                screen = 2;
+                                swap = 1;
+                            } else if (x > 324 && x < 486 && y > 0 && y < 202) {
+                                index_collection = 2 + 20 * page;
+                                screen = 2;
+                                swap = 1;
+                            } else if (x > 486 && x < 648 && y > 0 && y < 202) {
+                                index_collection = 3 + 20 * page;
+                                screen = 2;
+                                swap = 1;
+                            } else if (x > 648 && x < 810 && y > 0 && y < 202) {
+                                index_collection = 4 + 20 * page;
+                                screen = 2;
+                                swap = 1;
+                            } else if (x > 0 && x < 162 && y > 202 && y < 404) {
+                                index_collection = 5 + 20 * page;
+                                screen = 2;
+                                swap = 1;
+                            } else if (x > 162 && x < 324 && y > 202 &&
+                                       y < 404) {
+                                index_collection = 6 + 20 * page;
+                                screen = 2;
+                                swap = 1;
+                            } else if (x > 324 && x < 486 && y > 202 &&
+                                       y < 404) {
+                                index_collection = 7 + 20 * page;
+                                screen = 2;
+                                swap = 1;
+                            } else if (x > 486 && x < 648 && y > 202 &&
+                                       y < 404) {
+                                index_collection = 8 + 20 * page;
+                                screen = 2;
+                                swap = 1;
+                            } else if (x > 648 && x < 810 && y > 202 &&
+                                       y < 404) {
+                                index_collection = 9 + 20 * page;
+                                screen = 2;
+                                swap = 1;
+                            } else if (x > 0 && x < 162 && y > 404 && y < 606) {
+                                index_collection = 10 + 20 * page;
+                                screen = 2;
+                                swap = 1;
+                            } else if (x > 162 && x < 324 && y > 404 &&
+                                       y < 606) {
+                                index_collection = 11 + 20 * page;
+                                screen = 2;
+                                swap = 1;
+                            } else if (x > 324 && x < 486 && y > 404 &&
+                                       y < 606) {
+                                index_collection = 12 + 20 * page;
+                                screen = 2;
+                                swap = 1;
+                            } else if (x > 486 && x < 648 && y > 404 &&
+                                       y < 606) {
+                                index_collection = 13 + 20 * page;
+                                screen = 2;
+                                swap = 1;
+                            } else if (x > 648 && x < 810 && y > 404 &&
+                                       y < 606) {
+                                index_collection = 14 + 20 * page;
+                                screen = 2;
+                                swap = 1;
+                            } else if (x > 0 && x < 162 && y > 606 && y < 808) {
+                                index_collection = 15 + 20 * page;
+                                screen = 2;
+                                swap = 1;
+                            } else if (x > 162 && x < 324 && y > 606 &&
+                                       y < 808) {
+                                index_collection = 16 + 20 * page;
+                                screen = 2;
+                                swap = 1;
+                            } else if (x > 324 && x < 486 && y > 606 &&
+                                       y < 808) {
+                                index_collection = 17 + 20 * page;
+                                screen = 2;
+                                swap = 1;
+                            } else if (x > 486 && x < 648 && y > 606 &&
+                                       y < 808) {
+                                index_collection = 18 + 20 * page;
+                                screen = 2;
+                                swap = 1;
+                            } else if (x > 648 && x < 810 && y > 606 &&
+                                       y < 808) {
+                                index_collection = 19 + 20 * page;
+                                screen = 2;
+                                swap = 1;
+                            }
+                        }
+                    }
+                    break;
             }
+
+            SDL_SetRenderDrawColor(_renderer, 255, 255, 255, 255);
+
+            SDL_RenderClear(_renderer);
+
+            switch (screen) {
+                case 1:
+                    draw_cards_collection(page);
+                    break;
+
+                case 2:
+                    if (swap == 1) {
+                        std::cout << "swap" << std::endl;
+                        std::cout << index_collection << std::endl;
+                        std::cout << index_team << std::endl;
+                        swap_card(index_team, index_collection);
+                        swap = 0;
+                    }
+                    draw_pack_button();
+                    draw_team();
+                    break;
+
+                case 3:
+                    draw_blank_card();
+                    break;
+
+                case 4:
+                    card = open_pack();
+                    screen = 5;
+                    break;
+
+                case 5:
+                    card->draw(_renderer, 324, 304, 162, 202);
+                    break;
+            }
+            SDL_RenderPresent(_renderer);
         }
-        SDL_SetRenderDrawColor(_renderer, 255, 255, 255, 255);
-        SDL_RenderClear(_renderer);
-
-        draw_cards_collection();
-
-        SDL_RenderPresent(_renderer);
     }
 }

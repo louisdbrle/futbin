@@ -29,7 +29,9 @@ void Team::remove_from_team(Player* player) {
     }
 }
 
-void Team::add_card(Card* card) { _vect_card.push_back(card); }
+void Team::add_card(Card* card, int index) {
+    _vect_card.insert(_vect_card.begin() + index, card);
+}
 
 void Team::remove_card(Card* card) {
     std::vector<Card*>::iterator it = _vect_card.begin();

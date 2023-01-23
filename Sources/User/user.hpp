@@ -19,7 +19,7 @@ class User {
     User(std::string name);
     //~User();
 
-    Team* get_vect_team() { return _team; }
+    Team* get_team() { return _team; }
 
     std::vector<Player*> get_vect_player() { return _players; }
 
@@ -29,6 +29,12 @@ class User {
 
     void print_user();
     void print_collection();
+
+    void add_player(Player* player);
+    void remove_player(Player* player);
+
+    void add_card(Card* card);
+    void remove_card(Card* card);
 
    private:
     uint64_t _id;
