@@ -7,8 +7,18 @@
 #include <vector>
 
 Application::Application() {
-    this->load_db_players();
-    this->load_db_users();
+    SDL_Init(SDL_INIT_VIDEO);
+    TTF_Init();
+
+    _window =
+        SDL_CreateWindow("FUT Game", SDL_WINDOWPOS_UNDEFINED,
+                         SDL_WINDOWPOS_UNDEFINED, 850, 850, SDL_WINDOW_SHOWN);
+
+    _renderer = SDL_CreateRenderer(_window, -1, 0);
+
+    load_db_players();
+    load_db_users();
+    load_db_cards();
 }
 
 Application::~Application() {
@@ -27,6 +37,7 @@ void Application::load_db_players() {
     else {
         std::string delim = ",";
         std::string line;
+        getline(file, line);
         while (getline(file, line)) {
             std::vector<std::string> vect_string;
             for (uint8_t i = 0; i < 12; i++) {
@@ -34,16 +45,21 @@ void Application::load_db_players() {
                 line.erase(0, line.find(delim) + delim.length());
             }
 
-            if (vect_string[0] == "id") {
-            } else if (vect_string[4] == "GK") {
-                Goalkeeper new_player =
-                    Goalkeeper(std::stoi(vect_string[0]), vect_string[1], "-",
-                               255, vect_string[2], "-", "-");
+            if (vect_string[4] == "GK") {
+                Goalkeeper new_player = Goalkeeper(
+                    std::stoi(vect_string[0]), vect_string[1], vect_string[2],
+                    vect_string[3], std::stoi(vect_string[5]),
+                    std::stoi(vect_string[6]), std::stoi(vect_string[7]),
+                    std::stoi(vect_string[8]), std::stoi(vect_string[9]),
+                    std::stoi(vect_string[10]), std::stoi(vect_string[11]));
                 db_players.push_back(new_player);
             } else {
-                FieldPlayer new_player =
-                    FieldPlayer(std::stoi(vect_string[0]), vect_string[1], "-",
-                                255, vect_string[2], "-", "-", vect_string[4]);
+                FieldPlayer new_player = FieldPlayer(
+                    std::stoi(vect_string[0]), vect_string[1], vect_string[2],
+                    vect_string[3], vect_string[4], std::stoi(vect_string[5]),
+                    std::stoi(vect_string[6]), std::stoi(vect_string[7]),
+                    std::stoi(vect_string[8]), std::stoi(vect_string[9]),
+                    std::stoi(vect_string[10]), std::stoi(vect_string[11]));
                 db_players.push_back(new_player);
             }
 
@@ -75,9 +91,7 @@ void Application::load_db_users() {
 
         uint64_t id;
         std::string name;
-        std::vector<Player*> team1;
-        std::vector<Player*> team2;
-        std::vector<Player*> team3;
+        std::vector<Player*> team;
         std::vector<Player*> players;
         std::vector<Card*> cards;
 
@@ -103,9 +117,7 @@ void Application::load_db_users() {
             }
 
             if (cpt == 7) {
-                team1.clear();
-                team2.clear();
-                team3.clear();
+                team.clear();
                 players.clear();
                 cards.clear();
 
@@ -131,41 +143,12 @@ void Application::load_db_users() {
                                  j < vect_vect_string[i].size(); j++) {
                                 // We should have used maps, so that we could
                                 // have easily used ids to find anything.
-                                team1.push_back(get_player_by_id(
+                                team.push_back(get_player_by_id(
                                     std::stoi(vect_vect_string[i][j])));
                                 // std::cout << vect_vect_string[i][j] << " ";
                             }
                             // std::cout << "\n";
                             break;
-
-                        case 3:
-                            // std::cout << "Team2 : ";
-                            for (std::vector<
-                                     std::vector<std::string>>::size_type j = 1;
-                                 j < vect_vect_string[i].size(); j++) {
-                                // We should have used maps, so that we could
-                                // have easily used ids to find anything.
-                                team2.push_back(get_player_by_id(
-                                    std::stoi(vect_vect_string[i][j])));
-                                // std::cout << vect_vect_string[i][j] << " ";
-                            }
-                            // std::cout << "\n";
-                            break;
-
-                        case 4:
-                            // std::cout << "Team3 : ";
-                            for (std::vector<
-                                     std::vector<std::string>>::size_type j = 1;
-                                 j < vect_vect_string[i].size(); j++) {
-                                // We should have used maps, so that we could
-                                // have easily used ids to find anything.
-                                team3.push_back(get_player_by_id(
-                                    std::stoi(vect_vect_string[i][j])));
-                                // std::cout << vect_vect_string[i][j] << " ";
-                            }
-                            // std::cout << "\n";
-                            break;
-
                         case 5:
                             // std::cout << "Players : ";
                             for (std::vector<
@@ -188,12 +171,9 @@ void Application::load_db_users() {
                     }
                 }
 
-                Team* new_team1 = new Team(team1);
-                Team* new_team2 = new Team(team2);
-                Team* new_team3 = new Team(team3);
+                Team* new_team = new Team(team, cards);
 
-                User new_user = User(id, name, new_team1, new_team2, new_team3,
-                                     players, cards);
+                User new_user = User(id, name, new_team, players, cards);
                 db_users.push_back(new_user);
 
                 // std::cout << "\n";
@@ -204,6 +184,12 @@ void Application::load_db_users() {
     }
 
     file.close();
+}
+
+void Application::load_db_cards() {
+    for (auto& player : db_players) {
+        db_cards.push_back(Card(&player));
+    }
 }
 
 void Application::select_user(uint64_t user_id) {
@@ -243,3 +229,27 @@ void Application::print_db_users() {
     std::cout << std::endl;
 }
 
+void Application::draw_cards_collection() {
+    for (std::vector<Card>::size_type i = 0;
+         i < current_user->get_vect_cards().size(); i++) {
+        current_user->get_vect_cards()[i]->draw(_renderer, 162 * i,
+                                                202 * (i % 3), 162, 202);
+    }
+}
+
+void Application::run() {
+    bool quit = false;
+    while (!quit) {
+        while (SDL_PollEvent(&_event)) {
+            if (_event.type == SDL_QUIT) {
+                quit = true;
+            }
+        }
+        SDL_SetRenderDrawColor(_renderer, 255, 255, 255, 255);
+        SDL_RenderClear(_renderer);
+
+        draw_cards_collection();
+
+        SDL_RenderPresent(_renderer);
+    }
+}

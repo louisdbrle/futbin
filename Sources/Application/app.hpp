@@ -28,7 +28,12 @@ class Application {
     void print_db_players();
     void print_db_users();
 
+    void draw_cards_collection();
+
+    void run();
+
    private:
-    SDL_Renderer* renderer;
-    SDL_Window* window;
+    SDL_Renderer* _renderer;
+    SDL_Window* _window;
+    SDL_Event _event;
 };

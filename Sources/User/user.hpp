@@ -14,12 +14,12 @@ class Game;
 class User {
    public:
     User();
-    User(uint64_t id, std::string name, Team* team1, Team* team2, Team* team3,
+    User(uint64_t id, std::string name, Team* team,
          std::vector<Player*> vect_player, std::vector<Card*> vect_cards);
     User(std::string name);
     //~User();
 
-    std::vector<Team*> get_vect_team() { return _vect_team; }
+    Team* get_vect_team() { return _team; }
 
     std::vector<Player*> get_vect_player() { return _players; }
 
@@ -33,8 +33,7 @@ class User {
    private:
     uint64_t _id;
     std::string _name;
-    std::vector<Team*> _vect_team;
+    Team* _team;
     std::vector<Card*> _cards;
-
     std::vector<Player*> _players;
 };

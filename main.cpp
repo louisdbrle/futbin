@@ -22,9 +22,9 @@ int main(int argc, char** argv) {
 
         // ---Db printing--- //
         app.print_db_players();
-        app.print_db_users();  //
-
-        // app.run();
+        app.print_db_users();
+        app.db_cards[0].get_player()->print_player();
+        app.run();
         // ---Add of player in the team 0 of the current_user--- //
         // app.current_user->get_vect_team()[0]->add_to_team(&goal);
 

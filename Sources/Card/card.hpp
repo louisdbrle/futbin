@@ -1,5 +1,3 @@
-#pragma once
-
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL_ttf.h>
@@ -8,27 +6,12 @@
 
 class Card {
    public:
-    Card(Player* player, SDL_Renderer* renderer);
-    void draw(int* position);
+    Card(Player* player);
+    void draw(SDL_Renderer* renderer, int x, int y, int w, int h);
+    Player* get_player() { return _player; }
+    std::string get_path() { return _path; }
 
    private:
-    Player* player;
-    SDL_Texture* card_texture;
-    SDL_Texture* text_texture;
-    SDL_Renderer* renderer;
+    Player* _player;
+    std::string _path;
 };
-
-Card::Card(Player* player, SDL_Renderer* renderer)
-    : player(player), renderer(renderer) {
-    std::string path = "../Assets/";
-    path += player->get_id();
-    path += "_card.png";
-    SDL_Surface* card = IMG_Load(path.c_str());
-    card_texture = SDL_CreateTextureFromSurface(renderer, card);
-    SDL_FreeSurface(card);
-}
-
-void Card::draw(int* position) {
-    SDL_Rect rect_card = {position[0], position[1], position[2], position[3]};
-    SDL_RenderCopy(renderer, card_texture, NULL, &rect_card);
-}

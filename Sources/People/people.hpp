@@ -3,21 +3,17 @@
 #include <iostream>
 
 class People {
-public:
+   public:
     People();
-    People(uint64_t _id, std::string name, std::string last_name, u_short age, std::string nationality);
+    People(uint64_t _id, std::string name, std::string common_name);
     //~People();
 
     uint64_t get_id() { return _id; }
     std::string get_name() { return _name; }
-    std::string get_last_name() { return _last_name; }
-    u_short get_age() { return _age; }
-    std::string get_nationality() { return _nationality; }
+    std::string get_last_name() { return _common_name; }
 
-protected:
+   protected:
     uint64_t _id;
     std::string _name;
-    std::string _last_name;
-    u_short _age;
-    std::string _nationality;
+    std::string _common_name;
 };
