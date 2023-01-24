@@ -320,18 +320,20 @@ void Application::draw_pack_button() {
 void Application::swap_card(int index_team, int index_collection) {
     if (index_team < (int)current_user->get_team()->get_vect_card().size() &&
         index_collection < (int)current_user->get_vect_cards().size()) {
-        Card* team_card =
-            new Card(*current_user->get_team()->get_vect_card()[index_team]);
-        Card* collection_card =
-            new Card(*current_user->get_vect_cards()[index_collection]);
+        Card* team_card = new Card(*current_user->get_team()->get_vect_card()[index_team]);
+        Card* collection_card = new Card(*current_user->get_vect_cards()[index_collection]);
 
-        current_user->remove_card(
-            current_user->get_vect_cards()[index_collection]);
-        current_user->get_team()->remove_card(
-            current_user->get_team()->get_vect_card()[index_team]);
+        current_user->remove_card(current_user->get_vect_cards()[index_collection]);
+        current_user->remove_player(team_card->get_player());
+        current_user->get_team()->remove_card(current_user->get_team()->get_vect_card()[index_team]);
+        current_user->get_team()->remove_from_team(collection_card->get_player());
+        
 
         current_user->add_card(team_card);
+        current_user->add_player(collection_card->get_player());
         current_user->get_team()->add_card(collection_card, index_team);
+        current_user->get_team()->add_to_team(team_card->get_player());
+
     }
 }
 
