@@ -42,3 +42,12 @@ void Team::remove_card(Card* card) {
         it++;
     }
 }
+
+Team::~Team() {
+    for (std::vector<Player*>::size_type i = 0; i < _vect_player.size(); i++) {
+        delete _vect_player[i];
+    }
+    for (std::vector<Card*>::size_type i = 0; i < _vect_card.size(); i++) {
+        delete _vect_card[i];
+    }
+}

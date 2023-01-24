@@ -11,7 +11,6 @@ class Card {
     Card(Player* player);
     void draw(SDL_Renderer* renderer, int x, int y, int w, int h);
     Player* get_player() { return _player; }
-    std::string get_path() { return _path; }
     int get_id() { return _id; }
 
    private:

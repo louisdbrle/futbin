@@ -11,8 +11,8 @@ User::User(uint64_t id, std::string name, Team* team,
     : _id(id),
       _name(name),
       _team(team),
-      _players(vect_player),
-      _cards(vect_cards) {}
+      _cards(vect_cards),
+      _players(vect_player) {}
 
 User::User(std::string name) : _name(name) {
     _players.reserve(100);

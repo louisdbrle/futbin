@@ -24,7 +24,9 @@ Application::Application() {
 }
 
 Application::~Application() {
-    // delete [] current_user;
+    SDL_DestroyRenderer(_renderer);
+    SDL_DestroyWindow(_window);
+    SDL_Quit();
 }
 
 void Application::load_db_players() {
@@ -344,7 +346,7 @@ void Application::swap_card(int index_team, int index_collection) {
 
 void Application::run() {
     bool quit = false;
-    int screen = 2;
+    int screen = 1;
     int page = 0;
     int index_team = 0;
     int index_collection = 0;
@@ -373,6 +375,14 @@ void Application::run() {
                             }
                             break;
                         case SDLK_RETURN:
+                            if (screen == 1) {
+                                screen = 2;
+                                break;
+                            }
+                            if (screen == 2) {
+                                screen = 1;
+                                break;
+                            }
                             if (screen == 3) {
                                 screen = 4;
                                 break;
