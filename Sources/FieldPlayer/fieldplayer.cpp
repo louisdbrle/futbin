@@ -1,31 +1,25 @@
 #include "fieldplayer.hpp"
 
-FieldPlayer::FieldPlayer()
-    : Player() {
-    _stats->insert(std::pair<stat_FP_t, char>(RATING_FP, 255));
-
-    _stats->insert(std::pair<stat_FP_t, char>(PACE, 255));
-    _stats->insert(std::pair<stat_FP_t, char>(SHOOTING, 255));
-    _stats->insert(std::pair<stat_FP_t, char>(PASSING, 255));
-
-    _stats->insert(std::pair<stat_FP_t, char>(DRIBBLING, 255));
-    _stats->insert(std::pair<stat_FP_t, char>(DEFENDING, 255));
-    _stats->insert(std::pair<stat_FP_t, char>(PHYSICALITY, 255));
+FieldPlayer::FieldPlayer(): Player() {
+    _stats->insert(std::pair<std::string, int>("general", 0));
+    _stats->insert(std::pair<std::string, int>("pace", 0));
+    _stats->insert(std::pair<std::string, int>("shooting", 0));
+    _stats->insert(std::pair<std::string, int>("passing", 0));
+    _stats->insert(std::pair<std::string, int>("dribbling", 0));
+    _stats->insert(std::pair<std::string, int>("defending", 0));
+    _stats->insert(std::pair<std::string, int>("physical", 0));
 }
 
-// TODO : might need to had a pointer to a array containing the stats.
-
-// Do we give a pointer to a array, or a map ?
-FieldPlayer::FieldPlayer(uint64_t id, std::string name, std::string last_name, u_short age, std::string nationality, std::string club, std::string national, std::string position)
-    : Player(id, name, last_name, age, nationality, club, national, position) {
-    // Default value for now, until implementation of the pointer
-    _stats->insert(std::pair<stat_FP_t, char>(RATING_FP, 255));
-
-    _stats->insert(std::pair<stat_FP_t, char>(PACE, 255));
-    _stats->insert(std::pair<stat_FP_t, char>(SHOOTING, 255));
-    _stats->insert(std::pair<stat_FP_t, char>(PASSING, 255));
-
-    _stats->insert(std::pair<stat_FP_t, char>(DRIBBLING, 255));
-    _stats->insert(std::pair<stat_FP_t, char>(DEFENDING, 255));
-    _stats->insert(std::pair<stat_FP_t, char>(PHYSICALITY, 255));
+FieldPlayer::FieldPlayer(uint64_t id, std::string name, std::string common_name,
+    std::string nation, std::string position, int general,
+    int pace, int shooting, int passing, int dribbling,
+    int defending, int physical)
+    : Player(id, name, common_name, nation, position) {
+    _stats->insert(std::pair<std::string, int>("general", general));
+    _stats->insert(std::pair<std::string, int>("pace", pace));
+    _stats->insert(std::pair<std::string, int>("shooting", shooting));
+    _stats->insert(std::pair<std::string, int>("passing", passing));
+    _stats->insert(std::pair<std::string, int>("dribbling", dribbling));
+    _stats->insert(std::pair<std::string, int>("defending", defending));
+    _stats->insert(std::pair<std::string, int>("physical", physical));
 }

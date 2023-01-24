@@ -17,14 +17,21 @@ int main(int argc, char** argv) {
         Application app = Application();
 
         // ---User selection usage--- //
-        // app.select_user(0);
-        // std::cout << app.current_user->get_name() << "\n" << std::endl;
+        app.select_user(0);
+        std::cout << app.current_user->get_name() << "\n" << std::endl;
+
+        for (int i = 0; i < 130; i++) {
+            Player* player = app.get_rand_player();
+            app.current_user->add_player(player);
+            app.current_user->add_card(&app.db_cards[i]);
+            if (i < 11)
+                app.current_user->get_team()->add_card(&app.db_cards[i], i);
+        }
 
         // ---Db printing--- //
-        app.print_db_players();
-        app.print_db_users();  //
+        // app.print_db_players();
+        app.run();
 
-        // app.run();
         // ---Add of player in the team 0 of the current_user--- //
         // app.current_user->get_vect_team()[0]->add_to_team(&goal);
 

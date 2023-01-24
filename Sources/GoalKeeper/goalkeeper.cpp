@@ -1,30 +1,25 @@
 #include "goalkeeper.hpp"
 
-Goalkeeper::Goalkeeper()
-    : Player() {
-    _stats->insert(std::pair<stat_GK_t, char>(RATING_GK, 255));
-
-    _stats->insert(std::pair<stat_GK_t, char>(DIVING, 255));
-    _stats->insert(std::pair<stat_GK_t, char>(HANDLING, 255));
-    _stats->insert(std::pair<stat_GK_t, char>(KICKING, 255));
-
-    _stats->insert(std::pair<stat_GK_t, char>(REFLEXES, 255));
-    _stats->insert(std::pair<stat_GK_t, char>(SPEED, 255));
-    _stats->insert(std::pair<stat_GK_t, char>(POSITIONING, 255));
+Goalkeeper::Goalkeeper(): Player() {
+    _stats->insert(std::pair<std::string, int>("general", 0));
+    _stats->insert(std::pair<std::string, int>("diving", 0));
+    _stats->insert(std::pair<std::string, int>("handling", 0));
+    _stats->insert(std::pair<std::string, int>("kicking", 0));
+    _stats->insert(std::pair<std::string, int>("reflexes", 0));
+    _stats->insert(std::pair<std::string, int>("speed", 0));
+    _stats->insert(std::pair<std::string, int>("positioning", 0));
 }
 
-// TODO : might need to had a pointer to a array containing the stats.
-Goalkeeper::Goalkeeper(uint64_t id, std::string name, std::string last_name, u_short age, std::string nationality, std::string club, std::string national)
-    : Player(id, name, last_name, age, nationality, club, national, "GK") {
-    // Default value for now, until implementation of the pointer
-
-    _stats->insert(std::pair<stat_GK_t, char>(RATING_GK, 255));
-
-    _stats->insert(std::pair<stat_GK_t, char>(DIVING, 255));
-    _stats->insert(std::pair<stat_GK_t, char>(HANDLING, 255));
-    _stats->insert(std::pair<stat_GK_t, char>(KICKING, 255));
-
-    _stats->insert(std::pair<stat_GK_t, char>(REFLEXES, 255));
-    _stats->insert(std::pair<stat_GK_t, char>(SPEED, 255));
-    _stats->insert(std::pair<stat_GK_t, char>(POSITIONING, 255));
+Goalkeeper::Goalkeeper(uint64_t id, std::string name, std::string common_name,
+    std::string nation, int general, int diving,
+    int handling, int kicking, int reflexes, int speed,
+    int positioning)
+    : Player(id, name, common_name, nation, "GK") {
+    _stats->insert(std::pair<std::string, int>("general", general));
+    _stats->insert(std::pair<std::string, int>("diving", diving));
+    _stats->insert(std::pair<std::string, int>("handling", handling));
+    _stats->insert(std::pair<std::string, int>("kicking", kicking));
+    _stats->insert(std::pair<std::string, int>("reflexes", reflexes));
+    _stats->insert(std::pair<std::string, int>("speed", speed));
+    _stats->insert(std::pair<std::string, int>("positioning", positioning));
 }
