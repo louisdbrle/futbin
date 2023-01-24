@@ -1,7 +1,7 @@
 CC=g++
-CCFLAGS= -Wall -std=c++11 -g -I/opt/homebrew/include -D_GLIBCXX_USE_CXX11_ABI=0 
+CCFLAGS= -Wall -std=c++11 -g
 LIB_DIR= Libs
-LIBFLAGS= -L/opt/homebrew/lib -lSDL2_image -lSDL2_ttf -lSDL2
+LIBFLAGS= -I/usr/included/SDL2 -lSDL2_image -lSDL2_ttf -lSDL2
 
 SRC_DIR=Sources
 SRC= $(wildcard $(SRC_DIR)/*/*.cpp) $(wildcard main.cpp)
@@ -24,7 +24,7 @@ test : testcase
 	cd $(TST_DIR); ./testcase
 
 $(EXEC): $(OBJ)
-	$(CC) $(CCFLAGS) $(LIBFLAGS) $^ -o $@  
+	$(CC) $^ -o $@  $(CCFLAGS) $(LIBFLAGS)  
 
 %.o: %.cpp
 	$(CC) $(CCFLAGS) -o $@ -c $<

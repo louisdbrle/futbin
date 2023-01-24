@@ -11,10 +11,10 @@ class Card {
     Card(Player* player);
     void draw(SDL_Renderer* renderer, int x, int y, int w, int h);
     Player* get_player() { return _player; }
-    int get_id() { return _id; }
+    uint64_t get_id() { return _id; }
 
    private:
     Player* _player;
     std::string _path;
-    int _id;
+    uint64_t _id;
 };

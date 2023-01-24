@@ -6,9 +6,8 @@ Team::Team() {
 }
 
 Team::Team(std::vector<Player*>& vect_player, std::vector<Card*>& vect_card)
-    : _vect_player(vect_player), _vect_card(vect_card) {}
-
-Team::Team(Team& team) : _vect_player(team._vect_player) {}
+    : _vect_player(vect_player), _vect_card(vect_card) {
+}
 
 void Team::print_team() {
     for (std::vector<Player*>::size_type i = 0; i < _vect_player.size(); i++) {
@@ -43,6 +42,7 @@ void Team::remove_card(Card* card) {
     }
 }
 
+/*
 Team::~Team() {
     for (std::vector<Player*>::size_type i = 0; i < _vect_player.size(); i++) {
         delete _vect_player[i];
@@ -51,3 +51,4 @@ Team::~Team() {
         delete _vect_card[i];
     }
 }
+*/

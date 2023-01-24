@@ -1,8 +1,6 @@
 #pragma once
 
 class Player;
-class Match;
-class Coach;
 
 #include <iostream>
 #include <vector>
@@ -14,8 +12,7 @@ class Team {
    public:
     Team();
     Team(std::vector<Player*>& vect_player, std::vector<Card*>& vect_card);
-    Team(Team& team);
-    ~Team();
+    //~Team();
 
     std::vector<Player*> get_vect_player() { return _vect_player; }
     std::vector<Card*> get_vect_card() { return _vect_card; }

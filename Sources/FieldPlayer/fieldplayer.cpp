@@ -1,6 +1,6 @@
 #include "fieldplayer.hpp"
 
-FieldPlayer::FieldPlayer() : Player() {
+FieldPlayer::FieldPlayer(): Player() {
     _stats->insert(std::pair<std::string, int>("general", 0));
     _stats->insert(std::pair<std::string, int>("pace", 0));
     _stats->insert(std::pair<std::string, int>("shooting", 0));
@@ -11,9 +11,9 @@ FieldPlayer::FieldPlayer() : Player() {
 }
 
 FieldPlayer::FieldPlayer(uint64_t id, std::string name, std::string common_name,
-                         std::string nation, std::string position, int general,
-                         int pace, int shooting, int passing, int dribbling,
-                         int defending, int physical)
+    std::string nation, std::string position, int general,
+    int pace, int shooting, int passing, int dribbling,
+    int defending, int physical)
     : Player(id, name, common_name, nation, position) {
     _stats->insert(std::pair<std::string, int>("general", general));
     _stats->insert(std::pair<std::string, int>("pace", pace));

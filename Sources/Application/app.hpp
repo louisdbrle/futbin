@@ -30,7 +30,7 @@ class Application {
     void print_db_players();
     void print_db_users();
 
-    void draw_cards_collection(int page);
+    void draw_cards_collection(uint32_t page);
     void draw_team();
 
     void draw_blank_card();
