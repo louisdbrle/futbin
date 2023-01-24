@@ -42,6 +42,15 @@ void Team::remove_card(Card* card) {
     }
 }
 
+
+std::ostream& Team::operator<<(std::ostream& out) {
+    for (std::vector<Player*>::size_type i = 0; i < _vect_player.size(); i++) {
+        out << _vect_player[i];
+    }
+    out << "\n" << std::endl;
+    return out;
+}
+
 /*
 Team::~Team() {
     for (std::vector<Player*>::size_type i = 0; i < _vect_player.size(); i++) {

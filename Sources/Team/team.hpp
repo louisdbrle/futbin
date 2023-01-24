@@ -9,7 +9,7 @@ class Player;
 #include "../Player/player.hpp"
 
 class Team {
-   public:
+public:
     Team();
     Team(std::vector<Player*>& vect_player, std::vector<Card*>& vect_card);
     //~Team();
@@ -23,8 +23,11 @@ class Team {
 
     void add_card(Card* card, int index);
     void remove_card(Card* card);
+    std::ostream& operator<<(std::ostream& out);
 
-   private:
+
+
+private:
     std::vector<Player*> _vect_player;
     std::vector<Card*> _vect_card;
 };
